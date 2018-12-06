@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.Exam_summaryDao">
+	<select id="queryAll" resultMap="examplanPaperClass">
+		SELECT t1.examplanId,
+		paperName,className,examState FROM examplaninfo t1,paperinfo
+		t2,classinfo t3 WHERE t1.paperId=t2.paperId AND t1.classId=t3.classId
+	</select>
+	<resultMap type="ExamPlanInfo" id="examplanPaperClass">
+		<id property="examplanId" column="examplanId"/>
+		<result property="examState" column="examState" />
+		<association property="paperInfo" javaType="PaperInfo">
+			<result property="paperName" column="paperName" />
+		</association>
+		<association property="classInfo" javaType="ClassInfo">
+			<result property="className" column="className" />
+		</association>
+	</resultMap>
+
+	<select id="queryTeachers" resultType="TeacherInfo">
+		SELECT * FROM teacherinfo
+	</select>
+	<select id="queryByTeacherId" parameterType="int" resultMap="examplanPaperClass">
+		SELECT t1.examplanId,paperName,className,examState FROM examplaninfo t1,paperinfo
+		t2,classinfo t3,teacherinfo t4,courseinfo t5 WHERE
+		t1.paperId=t2.paperId AND t1.classId=t3.classId AND
+		t4.teacherId=#{teacherId} AND t4.teacherId=t5.teacherId AND
+		t2.courseId=t5.courseId
+	</select>
+</mapper>

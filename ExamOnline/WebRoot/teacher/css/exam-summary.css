@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* CSS Document */
+
+main{
+	padding-top:20px 50px 0 20px;
+	}
+form{
+	width:100%;
+	height:70px;
+	background-color:#cdd3db;
+	border:1px #999 solid;
+	border-radius:5px;
+	padding-left:30px;
+	padding-right:40px;
+	}
+.guidance{
+	color:#7e7ec0;
+	line-height:70px;
+	}
+.main-content{
+	width:100%;
+	
+	background-color:#fff;
+	padding-top:65px;
+	padding-left:4%;
+	padding-bottom:65px;
+	}
+.main-content li{
+	width:21%;
+	/*height:200px;*/
+	background-color:#f8f9fb;
+	border:1px #eceef4 solid;
+	float:left;
+	padding: 3%;
+	margin-right:4%;
+	margin-bottom:4%;
+	}
+.main-content li a{
+	width:100%;
+	/*height:260px; */ 
+	display:block;
+	pointer:cursor;
+	text-decoration: none;
+	}
+.main-content li a i{
+	width:100%;
+	text-align: center;
+	}
+.f-60{
+	font-size:60px;
+	}
+.which-class{
+	width:100%;
+	color:#e64a4a;
+	text-align:center;
+	line-height:200%;
+	}
+.which-teacher{
+	width:100%;
+	color:#7f8181;
+	text-align:center;
+	line-height:200%;
+	}
+.exam-condition{
+	color:#f38b04;
+	text-align:center;
+	line-height:200%;
+	}
+#dropdownMenu1{
+	width: 250px;
+}
+/*.container-style{
+	width: 500px;
+	height: 550px;
+	float: left;
+	display: none;
+}*/
+.this-pie{
+	width: 500px;
+	height: 550px;
+	float: left;
+	display: none;
+	margin:0 auto;	
+}
+.this-pie-box{
+	padding:0 5%;
+}
+#class-menu{
+	width: 250px;
+}
+.row{
+	margin: 0px;
+}
+#btn1{
+	width: 230px;
+	display: inline-block;
+	position: relative;
+}
+#pagination{
+	width: 250px;
+	margin: 0px 40%;
+}
+.fliter-box{
+	width: 230px;
+	/*height: 250px;*/
+	position: absolute;
+	top: 35px;
+	left: 90px;
+	display: none;
+	z-index:9;
+	background-color:#ffffff;
+}
+#fliterBox li{
+	cursor:pointer;
+}
+.year{
+	height: 100%;
+	padding: 0px;
+}
+.list-item{
+	list-style: none;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border-bottom: 1px solid rgba(91,192,222,0.7);
+}
+.nav-actived{
+	background-color: rgba(91,192,222,0.5);
+}
+.subject{
+	padding: 0px;
+	border-left: 2px solid rgba(91,192,222,0.5);
+	border-right: 2px solid rgba(91,192,222,0.5);
+	height: 100%;
+}
+.subject ul li:hover,.year ul li:hover{
+	font-size:16px;
+	background-color: rgba(91,192,222,0.2);
+}
+.back{
+	width:100%;
+	text-align: end;
+	padding-right:5%;
+}

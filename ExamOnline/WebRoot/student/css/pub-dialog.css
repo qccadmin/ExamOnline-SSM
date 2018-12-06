@@ -1,0 +1,30 @@
+﻿body {font-family : "Microsoft YaHei";}
+.ui-dialog {
+*zoom : 1; _float : left; position : relative; background-color : #fff; opacity : 0; border-radius : 4px; outline : 0; background-clip : padding-box; font-family : "Microsoft YaHei"; font-size : 14px; line-height : 1.428571429; color : #333; -webkit-transform : scale(0); transform : scale(0); -webkit-transition : -webkit-transform .15s ease-in-out, opacity .15s ease-in-out; transition : transform .15s ease-in-out, opacity .15s ease-in-out; border: #dcdcdc solid 1px\0; #border:#dcdcdc solid 1px; box-shadow:1px 1px 5px #676767;}
+.ui-popup-show .ui-dialog { opacity : 1; -webkit-transform : scale(1); transform : scale(1); border-radius: 8px; border: 1px solid #e7e7e7; overflow: hidden; }
+.ui-dialog-header { width: 100%; height: 48px; line-height: 48px; background: #f8f8f8; border-bottom: 1px solid #e7e7e7; overflow: hidden; }
+/*guanbi*/
+.ui-dialog-close { position: relative; _position: absolute; float: right; top: 10px; right: 20px; _height: 26px; width: 30px; height: 30px; line-height: 30px; font-size: 30px; color : #fff; cursor : pointer; background: #ddd; border-radius: 30px; -webkit-appearance : none; border: none; }
+.ui-dialog-close:hover, .ui-dialog-close:focus { text-decoration : none; cursor : pointer; outline : 0; background: #ee4500; }
+.ui-dialog-title { font-size: 14px; padding-left: 20px; color: #666; }
+/*bot-button*/
+.ui-dialog-button { height: 40px; line-height: 40px; text-align: center; margin: 0 0 30px 0; }
+.ui-dialog-button .ui-dialog-autofocus { background: #e45433; border: 1px solid #d63910; cursor: pointer; margin: 0 5px; box-shadow: 0 1px 2px #eee; }
+.ui-dialog-button .ui-dialog-autofocus:hover { background: #f7795b; border: 1px solid #f7795b; }
+.ui-dialog-button button { line-height: 35px; padding: 0 25px; background: #9fa5ad; border: 1px solid #9aa0a9; border-radius: 3px; font-size: 14px; font-family : "Microsoft YaHei"; color: #fff; cursor:pointer; }
+.ui-dialog-button button:hover { background: #a6adb4; border: 1px solid #a6adb4; }
+.ui-dialog-button .ui-dia-zt { background: #4bb47b; border: 1px solid #34ab6e; }
+.ui-dialog-button .ui-dia-zt:hover { background: #5dbb88; border: 1px solid #5dbb88; }
+/*tongyong*/
+.ui-dialog-yong { text-align: center; max-width:380px; line-height: 28px; padding: 0 30px; }
+.ui-dialog-tiku { min-width: 420px; line-height: 26px; padding: 35px 0; font-size: 16px; zoom: 1; }
+.ui-dialog-tiku:after { display: block; visibility: hidden; clear: both; height: 0; content: '.'; }
+.loader {padding: 30px; }
+.loader i {padding: 0 20px; width: 32px; height: 32px; display: block; background: url(loading.gif) no-repeat center 0; }
+/*xiugai*/
+.xiugai-sug{ padding:20px 30px; background:#f5f5f5; line-height:24px;}
+.xiugai-sug i{ width:25px; height:25px; display:block; background: url(uid_icon.png) no-repeat; float: left; margin-right:10px;}
+.xiugai-sug i.ch{}
+.xiugai-sug i.no-ch{ background-position:0 -36px;}
+.xiugai-sug i.no-xiao{ background-position:0 -72px;}
+.xiugai-sug img{ width:20px; height:20px; margin-right:10px; float:left;}

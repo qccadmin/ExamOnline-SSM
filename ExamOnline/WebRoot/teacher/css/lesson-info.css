@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*main*/
+.content{width:100%; padding:15px 20px; position:relative;}
+.row{
+  margin: 0px;
+}
+.content span{font-size:20px;}
+#search{height: 35px; width: 350px; padding-left: 5px;}
+#batch-delete{width:100px;position:relative;left:15px;}
+#add{width:138px;position:relative; left:20px;}
+.search{position:relative; left: 370px;}
+.table-information{width:100%; border:1px;}
+.table-information .title td{font-size:15px; height:45px; line-height:45px; font-weight:bold;}
+.table-information tr td{text-align:center; height:45px; line-height:45px; font-size:14px;}
+.cover-delete,.cover-add{width:100%; height:100%; position:absolute; top:0; left:0; background-color:rgba(204,204,204,0.5); z-index:5; display:none;}
+.cover-delete .cover-wranning,.cover-add .add-wranning{width:420px; height:270px; position:absolute; left:50%; margin-left:-225px; margin-top:200px; background-color:rgba(109,109,108,0.5); border-radius:10px; padding:0 30px;}
+.cover-wranning p,.add-wranning p{line-height:30px;}
+.title{margin-bottom: 40px;}
+.addcourse{display: none;}
+.addcourse a{display: block; text-decoration: none; color: #000; font-size: 14px;}
+.addcourse img{width: 100%; margin-bottom: 10px;}
+.addcourse ul li{margin-bottom: 50px; position: relative;}
+.addcourse ul li button{margin-top: 10px; position: absolute; bottom: -40px; left: 135px;}
+.filterform{display: none;}
+.filtertable{width: 982px; border: 1px; margin-left: 16px; margin-top: 30px;}
+.filtertableTd{text-align:center; height:45px; line-height:45px; font-size:14px;}
+.filtertabletitle{font-size:15px; height:45px; line-height:45px; font-weight:bold;}
+.back{position: relative; top: 10px; left: 450px;}
+.pagination{position: relative; top: 0; left: 375px;}
+.controls{padding: 40px; }

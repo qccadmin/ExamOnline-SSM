@@ -1,0 +1,125 @@
+@import "./reset.scss";
+@import "./color.scss";
+
+.header{
+    display: flex;
+    border-bottom: 1px solid #eee;
+    height: 50px;
+    align-items: center;
+    .back,.selected{
+        width: 50px;
+        text-align: center;
+    }
+    .search{
+        flex: 1;
+        border: 1px solid #eee;
+        height: 40px;
+        line-height: 40px;
+
+        outline: none;       
+        padding-left: 10px;
+    }
+
+}
+
+.nav{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    border-bottom: 1px solid #EEEEEE;
+    .nav-item{
+        flex: 1;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        &:active{
+            background-color: lightcoral;
+        }
+    }
+}
+
+.goods-list{
+    .goods-item{
+        height: 125px;
+        display: flex;
+        border-bottom: 1px solid #EEEEEE;
+        img{
+            flex: none;
+            width: 120px;
+            height: 120px;
+        }
+        .goods-detail{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            
+            .goods-title,.goods-sell,.goods-price{
+                flex: 1;
+                display: flex;
+                align-items: center;
+            }
+            .goods-sell{
+                .sell{
+                    margin-right: 10px;
+                }    
+            }
+            .goods-price{
+                .goods-price-text{
+                    flex-basis: auto;
+                }
+                .goods-trans{
+                    flex-basis: auto;
+                }
+            }
+            .goods-price-right{
+                flex: 1;
+                display: flex;
+                justify-content: flex-end;
+                margin-right: 10px;
+                .goods-point{
+                    text-align: right;
+                }
+            }
+        }
+    }
+    
+}
+
+
+
+
+
+//.container {
+//  display: flex;
+//  width: 300px; // 父容器宽度是 300像素
+//  height: 500px;
+//  border: 1px solid lightcoral;
+//  margin: 0 auto;
+//  box-sizing: content-box;  
+//  justify-content: space-around;
+//  align-items: center;
+//  flex-wrap: nowrap;
+//  .item {
+//      flex: 1;
+//      height: 100px;
+//  }
+//  
+//  .item:nth-child(1) {
+//      background-color: lightblue;
+//      flex-basis: 200px;
+//     
+//  }
+//  .item:nth-child(2) {
+//      background-color: lightcoral;
+//  }
+//  .item:nth-child(3) {
+//      background-color: lightskyblue;
+//  }
+//  .item:nth-child(4) {
+//      display: none;
+//  }
+//  .item:nth-child(5) {
+//      display: none;
+//  }
+//}

@@ -1,0 +1,20 @@
+
+.pie-style{
+	width:500px;
+	height:550px;
+	margin:0 auto;
+}
+.details{
+	padding: 3% 10%;
+}
+main{
+	padding-top:50px;
+}
+td,th{
+	text-align: center;
+}
+#back{
+	position:absolute;
+	left:3%;
+	top:7%;
+}	

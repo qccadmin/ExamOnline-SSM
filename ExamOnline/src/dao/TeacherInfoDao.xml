@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.TeacherInfoDao"><!-- 写对应类名全路径 -->
+	<insert id="insert" parameterType="TeacherInfo">
+		INSERT INTO
+		teacherinfo(teachername,teacherpwd,isAdmin,joindate,email)
+		VALUES(#{teacherName},#{teacherPwd},#{isAdmin},STR_TO_DATE(#{joindate},'%Y-%m-%d'),#{email})
+	</insert>
+
+	<select id="queryAll" parameterType="Page" resultMap="TeacherMap">
+		select * from teacherinfo limit #{pianyi},#{rows}
+	</select>
+	<select id="queryAllTeacher" resultMap="TeacherMap">
+		select * from teacherinfo
+	</select>
+	<select id="queryAllCount" resultType="int">
+		select count(*) from teacherinfo
+	</select>
+
+	<select id="queryByName" resultMap="TeacherMap">
+		select * from teacherinfo 
+		<if test="teachername!=null and teachername!=''">
+			where teacherName like '%${teachername}%'
+		</if>
+		limit #{page.pianyi},#{page.rows}
+	</select>
+
+	<delete id="delete" parameterType="int">
+		delete from teacherinfo where
+		teacherId = #{teacherId}
+	</delete>
+	
+	<update id="update" parameterType="TeacherInfo">
+		UPDATE teacherinfo SET teacherPwd = #{teacherPwd},joindate = STR_TO_DATE(#{joindate},'%Y-%m-%d'),email = #{email} WHERE teacherId = #{teacherId}
+	</update>
+	
+	<select id="queryById" parameterType="int" resultMap="TeacherMap">
+		select * from teacherinfo where teacherId = #{id}
+	</select>
+	
+	<select id="queryByNameCount" parameterType="String" resultType="int">
+		select count(*) from teacherinfo 
+		<if test="teachername!=null and teachername!=''">
+			where teacherName like '%${teachername}%'
+		</if>
+	</select>
+	<select id="queryByClassId" parameterType="int" resultType="TeacherInfo">
+		select a.* from teacherinfo a,classandteacher b where a.teacherId = b.teacherId and b.classId = #{id}
+	</select>
+	<select id="queryNoByClassId" parameterType="int" resultType="TeacherInfo">
+		select a.* from teacherinfo a,classandteacher b where a.teacherId = b.teacherId and b.classId != #{id}
+	</select>
+	<resultMap type="TeacherInfo" id="TeacherMap">
+		<id property="teacherId" column="teacherId" />
+		<result property="teacherName" column="teacherName" />
+		<result property="teacherPwd" column="teacherPwd" />
+		<result property="isAdmin" column="isAdmin" />
+		<result property="joindate" column="joindate"/>
+		<result property="email" column="email"/>
+	</resultMap>
+	
+	<select id="teacherLogin" parameterType="TeacherInfo" resultType="TeacherInfo">
+		SELECT * from teacherinfo WHERE teacherId=#{teacherId} AND teacherPwd=#{teacherPwd}
+	</select>
+</mapper>

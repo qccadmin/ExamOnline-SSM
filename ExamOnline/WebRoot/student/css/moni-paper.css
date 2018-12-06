@@ -1,0 +1,59 @@
+@charset "utf-8";
+/*monishijuan*/
+.score{position:absolute; left:30px; top:10px;}
+.score .num{ color:#d00; font:65px/80px Tahoma, Geneva, sans-serif}
+.score .ico{ width:56px; height:28px; background:url(../images/scorbg.png) no-repeat; position:absolute; right:-20px; bottom:-25px}
+.m-examHead:after{display:block;visibility:hidden;clear:both;height:0;content:'.';}
+.m-examHead{ zoom:1;}
+.m-examHead .h2{ font-size:24px;font-family:"Microsoft Yahei"; border-bottom:#e5e5e5 dashed 1px; line-height:30px; text-align:center; padding-top:60px; padding-bottom:25px; margin:0 30px;}
+.m-examHead .info{text-align:left; font-size:14px; line-height:25px; padding:25px 0 15px 0; color:#666; margin:0 30px;}
+.m-examHead .info-two{ height:35px; line-height:35px; display:block; background:#fff9e9; border:1px dashed #ffeec4; text-align:center;margin:0 30px 25px 30px; color:#ed7321;}
+.ui-progress .navBox{ width:1138px; height:auto;  line-height:56px;background-color:#f9f9f9;border:#e7e7e7 solid 1px; border-top:0;  padding:0 30px; box-shadow:0 2px 3px #eee;}
+.ui-progress .navBox .btn{ padding:0 15px; font-size:14px; display:block; float:left; line-height:30px; margin:12px 15px 0 0 ;border-radius:30px; background-color:#6e727a; color:#fff; white-space:nowrap;}
+.ui-progress .navBox .btn:hover{background-color:#e45c40; }
+
+.ui-progress,.ui-progress-sub{ padding-bottom:10px; }
+.ui-progress-sub{ border:1px solid #e7e7e7;background:#f8f8f8; margin-top:-2px;}
+.ui-progress:after {display:block;visibility:hidden;clear:both;height:0;content:'.';}
+.ui-progress{zoom:1;}
+.ui-progress,
+.ui-progress > .ui-progress-sub{ width:1198px;height:auto; display:inline-block;}
+.m-examHead .pop-fixed{ border-bottom:#e3e3e3 solid 1px; background-color:#FFF;-webkit-box-shadow:rgba(0, 0, 0, .1) 0 1px 5px; -moz-box-shadow:rgba(0, 0, 0, .1) 0 1px 5px; box-shadow:rgba(0, 0, 0, .1) 0 1px 5px ; position:fixed; z-index:99;}
+.m-examHead .attention{ border:#ffe9da dashed 1px; background-color:#fffef6; padding:10px; font-size:12px; text-align:center; color:#f06000; margin-top:15px}
+
+.m-examHead{position:relative;z-index:3; }
+.m-examHead .tool{position:absolute; right:15px; top:15px; display:inline-block;font-family:"Microsoft Yahei";}
+.m-examHead .tool-blk{ width:28px;display:block;float:left; cursor:pointer; position:relative}
+.m-examHead .tool-blk .ico{ width:18px; height:18px; display:block; margin:0 auto; background-image:url();background-repeat:no-repeat}
+.m-examHead .tool-blk .skin{ background-position:-245px -73px}
+.m-examHead .tool-blk .font{ background-position:-245px -95px}
+.m-examHead .tool-blk .roll{ background-position:-245px -122px}
+.m-examHead .tool-blk .txt{ width:100%; text-align:center; line-height:30px;display:inline-block; color:#666}
+
+.m-examHead .tool .pop{ border:#a9a9a9 solid 1px; position:absolute; right:0px; top:55px; background-color:#FFF;box-shadow:0px 0px 3px #aaa;border-radius:3px; z-index: 10}
+.m-examHead .tool .txt-size{ padding:20px 10px; width:150px;display:inline-block; *height:38px; overflow:hidden;}
+.m-examHead .tool .txt-size a{border:#ccc solid 1px; background-color:#f8f8f8; width:35px; height:35px; line-height:35px; text-align:center; display:block; float:left; margin-left:10px;border-radius:3px;}
+.m-examHead .tool .txt-size a:hover{ border-color:#8e8e8e;box-shadow:0px 0px 5px #8e8e8e;}
+.m-examHead .tool .txt-size .ui-check{border-color:#8e8e8e;box-shadow:0px 0px 3px #8e8e8e; color:#f06000; }
+.m-examHead .tool .f-f18{ font-size:18px}
+.m-examHead .tool .f-f16{ font-size:16px}
+.m-examHead .tool .f-f14{ font-size:14px}
+
+/*ie6-ie8*/
+@media \0screen\,screen\9{
+  .ui-progress,
+  .ui-progress > .ui-progress-sub{width: 998px;height:auto; }
+  .ui-progress .navBox{ width:938px; height:auto;  *border:0;}
+}
+/*1000px*/
+@media screen and (max-width:1200px){
+  .ui-progress,
+  .ui-progress > .ui-progress-sub{width: 998px;height: auto;}
+  .ui-progress .navBox{ width:938px; height:auto;}
+}
+/*960px*/
+@media screen and (max-width:1000px){
+  .ui-progress,
+  .ui-progress > .ui-progress-sub{width: 958px;height: auto;}
+  .ui-progress .navBox{ width:898px; height:auto;}
+}

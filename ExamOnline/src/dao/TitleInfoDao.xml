@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.TitleInfoDao">
+	<select id="getTitleByPaperId" parameterType="int" resultMap="titleMap">
+		SELECT p.*,t.* from paperinfo p,titleinfo t WHERE p.paperId=t.paperId AND p.paperId=#{paperId}
+	</select>
+	<resultMap type="TitleInfo" id="titleMap">
+		<id property="titleId" column="titleId"/>
+		<result property="titleCat" column="titleCat"/>
+		<result property="titleStem" column="titleStem"/>
+		<result property="optionA" column="optionA"/>
+		<result property="optionB" column="optionB"/>
+		<result property="optionC" column="optionC"/>
+		<result property="optionD" column="optionD"/>
+		<result property="answerRight" column="answerRight"/>
+		<result property="analyze" column="analyze"/>
+		<result property="answerScore" column="answerScore"/>
+		<association property="paperInfo" javaType="PaperInfo">
+			<id property="paperId" column="paperId"/>
+		</association>
+	</resultMap>
+</mapper>

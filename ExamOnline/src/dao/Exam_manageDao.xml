@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.Exam_manageDao">
+	<select id="queryAllByPage" resultMap="queryExam">
+		SELECT t1.examplanId,t4.courseId
+		,t4.courseName ,t3.paperId
+		,t2.className, t1.startTime,t1.overTime,t5.teacherName,t1.examState FROM
+		examplaninfo t1,classinfo t2,paperinfo t3,courseinfo t4,teacherinfo t5
+		WHERE t1.paperId=t3.paperId AND t1.classId=t2.classId AND
+		t3.courseId=t4.courseId AND t4.teacherId=t5.teacherId 
+		<if test="pianyi!=-1">
+			LIMIT #{pianyi},#{rows}
+		</if>
+	</select>
+	<resultMap type="ExamPlanInfo" id="queryExam">
+		<id property="examplanId" column="examplanId" />
+		<result property="startTime" column="startTime" />
+		<result property="overTime" column="overTime" />
+		<result property="examState" column="examState"/>
+		<association property="paperInfo" javaType="PaperInfo">
+			<id property="paperId" column="paperId" />
+			<association property="courseInfo" javaType="CourseInfo">
+				<id property="courseId" column="courseId" />
+				<result property="courseName" column="courseName" />
+				<association property="teacherInfo" javaType="TeacherInfo">
+					<result property="teacherName" column="teacherName" />
+				</association>
+			</association>
+		</association>
+		<association property="classInfo" javaType="ClassInfo">
+			<result property="className" column="className" />
+		</association>
+	</resultMap>
+	<select id="count" resultType="int">
+		SELECT COUNT(*) FROM
+		examplaninfo
+		t1,classinfo t2,paperinfo t3,courseinfo t4,teacherinfo t5 WHERE
+		t1.paperId=t3.paperId AND t1.classId=t2.classId AND
+		t3.courseId=t4.courseId AND t4.teacherId=t5.teacherId
+	</select>
+	<select id="queryTeachers" resultType="TeacherInfo">
+		SELECT * FROM teacherinfo
+	</select>
+	<select id="queryByTeacherId" parameterType="int" resultMap="queryExam">
+		SELECT t1.examplanId,t4.courseId
+		,t4.courseName ,t3.paperId
+		,t2.className, t1.startTime,t1.overTime,t5.teacherName,t1.examState FROM
+		examplaninfo t1,classinfo t2,paperinfo t3,courseinfo t4,teacherinfo t5
+		WHERE t1.paperId=t3.paperId AND t1.classId=t2.classId AND
+		t3.courseId=t4.courseId AND t4.teacherId=t5.teacherId AND t5.teacherId=#{teacherId}
+	</select>
+	<update id="startExam" parameterType="int">
+		UPDATE examplaninfo SET startTime = (SELECT NOW()),examState=1 WHERE examplanId=#{examplanId}
+	</update>
+	<update id="endExam" parameterType="int">
+		UPDATE examplaninfo SET overTime = (SELECT NOW()),examState=2 WHERE examplanId=#{examplanId}
+	</update>
+</mapper>

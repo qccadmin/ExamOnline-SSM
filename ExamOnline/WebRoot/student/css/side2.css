@@ -1,0 +1,12 @@
+.side-jf { position: fixed; left: 50%; margin-left: -750px; top: 50%; margin-top: 0px; z-index: 9999; _position: absolute; _margin-top: 0; _top: expression(eval(document.documentElement.scrollTop+(document.documentElement.clientHeight-this.offsetHeight)/2));
+text-align: left; }
+.jf-close { width: 24px; height: 24px; display: inline-block; cursor: pointer; background: url(side.png) 0 0; }
+.jf-close:hover { background: url(side.png) -26px 0; }
+.jf-bg { width: 160px; height: 120px; display: block; background: url(side.png) 0 -49px no-repeat; margin-top: -20px; }
+.jf-bg1 { width: 160px; height: 120px; display: block; background: url(side1.png) 0 -49px no-repeat; margin-top: -20px; }
+ @media screen and (max-width:1200px) {
+.side-jf { margin-left: -670px !important; }
+}
+@media screen and (max-width:1000px) {
+.side-jf { margin-left: -600px !important; }
+}

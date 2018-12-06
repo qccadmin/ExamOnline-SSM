@@ -1,0 +1,89 @@
+.content{
+    width: 1200px;height: auto;
+    margin: 3% auto;
+}
+/*试题导航栏设置*/
+.content>.nav{
+    width: 100%;
+    line-height: 56px;
+}
+.content>.nav>label{
+    font-size: 14px;
+}
+/*试题内容设置*/
+.content>.con{
+    width: 1200px;height: 750px;
+    padding: 20px 20px;
+    background: #FFFFFF;
+    border: 1px solid #C8C8C8;
+    margin-bottom: 50px;
+}
+.content>.con>label,.content>.con>span{
+    font-size: 18px;
+    color: #646464;
+    line-height: 26px;
+}
+.content>.con>span{color: #5481E6;cursor: pointer}
+.con-test{
+    width: 100%;line-height: 66px;
+    border-top: 1px solid #C8C8C8;
+    font-size: 20px;
+    color: #646464;
+}
+.con-test>div{
+    width: 300px;margin-left: 50px;
+    display: inline-block;
+}
+.con-test>button{
+    width: 80px;line-height: 28px;
+    text-align: center;
+    font-size: 12px;
+}
+.con-btn-per1{
+    border: 1px solid #969696;
+    border-radius: 4px;
+    color: mediumseagreen;
+    margin-left: 60px;
+}
+.con-btn-per2{
+    border: 1px solid #969696;
+    border-radius: 4px;
+    color: #FF5353;
+    margin-left: 60px;
+}
+.con-test>label{
+    margin-left:217px;
+}
+.con-btn-test{
+    border: 1px solid #ADEBFF;
+    border-radius: 4px;
+    margin-left: 233px;
+    color: #ADEBFF;
+}
+.con-btn-grade{
+    border: 1px solid #969696;
+    border-radius: 4px;
+    color: #969696;
+    margin-left: 233px;
+}
+/*底部翻页设置*/
+.con-ft{
+    width: 230px;line-height: 20px;
+    margin: 0% auto;
+    font-size: 16px;color: #969696;
+    position: relative;top: 370px;
+}
+.con-ft>.con-ft-btn,.con-ft>u,.con-ft>ul>li{
+    float: left;
+}
+.con-ft>ul>li{
+    margin-left: 10px;margin-top: 2px;
+    cursor: default;
+}
+.con-ft>ul>li:hover{
+    color: #5EB0FA;
+}
+/*选中或者当前页样式*/
+.ft-link-sel{
+    color: #5EB0FA;
+}

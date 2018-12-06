@@ -1,0 +1,303 @@
+@charset"utf-8"
+/***************************reset**************************/
+*{
+	margin:0;
+	padding:0;
+	boder-sizing:boder-box;
+  moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+body{
+	font-size:14px;
+	font-family:Arial,Verdana,Tahoma,"微软雅黑","黑体";
+	line-height:120%;
+	/*background:#fff;*/
+	background-color: white;
+	margin:0;
+	overflow-x:hidden;
+}
+p,h1,h2,h3,h4,h5,h6,ul,ol,dl,li,form,table{
+	margin:0;padding:0;
+}
+a,img{
+	border:none;
+	text-decoration: none;
+}
+img{
+	vertical-align:middle;
+	border:0;
+}
+li{list-style:none;}
+
+/**********************media query***********************/
+
+/*********************Gobal Classes**********************/
+/*清除浮动*/
+.clearfix:after{
+	clear: both;
+	content: '';
+	display: block;
+}
+/*For IE*/
+.clearfix{
+	zoom: 1;
+}
+/*常用颜色*/
+.color-white{
+	color: white;
+}
+.bgc-white{
+	background-color: white;
+}
+.color-black{
+	color: black;
+}
+.bgc-black{
+	background-color: black;
+}
+.color-welcome{
+	color:rgba(50,104,133,1);
+}
+.bgc-welcome{
+	background-color: rgba(50,104,133,1);
+}
+.color-header{
+	color:rgba(130,182,211,1);
+}
+.bgc-header{
+	background-color: rgba(130,182,211,1);
+}
+.color-primary{
+	color: rgba(66,139,202,1);
+}
+.bgc-primary{
+	background-color: rgba(66,139,202,1);
+}
+.color-success{
+	color: rgba(92,184,92,1);
+}
+.bgc-success{
+	background-color: rgba(92,184,92,1);
+}
+.color-info{
+	color: rgba(91,192,222,1);
+}
+.bgc-info{
+	background-color: rgba(91,192,222,1);
+}
+.color-wraning{
+	color: rgba(240,173,78,1);
+}
+.bgc-wraning{
+	background-color: rgba(240,173,78,1);
+}
+.color-danger{
+	color: rgba(217,83,79,1);
+}
+.bgc-danger{
+	background-color: rgba(217,83,79,1);
+}
+/*文本对齐方式*/
+.t-l{
+	text-align:left;
+}
+.t-c{
+	text-align:center;
+}
+.t-r{
+	text-align:right;
+}
+/*块状元素水平居中*/
+.m-c{
+	margin: 0px auto;
+}
+/*浮动方向*/
+.f-l{
+	float: left;
+}
+.f-r{
+	float: right;
+}
+/*字体大小*/
+.f-b{
+	font-weight: bold;
+}
+.f-12{
+	font-size:12px;
+}
+.f-13{
+	font-size:13px;
+}
+.f-14{
+	font-size:14px;
+}
+.f-16{
+	font-size:16px;
+}
+.f-18{
+	font-size:18px;
+}
+.f-20{
+	font-size:20px;
+}
+/*显示方式*/
+.block{
+	display: block;
+}
+.inline{
+	display: inline;
+}
+.inline-block{
+	display: inline-block;
+}
+/*常用外边距*/
+.m-b-10{
+	margin-bottom: 10px;
+}
+.m-b-20{
+	margin-bottom: 20px;
+}
+.m-b-30{
+	margin-bottom: 30px;
+}
+.m-t-10{
+	margin-top: 10px;
+}
+.m-t-20{
+	margin-top: 20px;
+}
+.m-t-30{
+	margin-top: 30px;
+}
+.m-l-10{
+	margin-left: 10px;
+}
+.m-l-20{
+	margin-left: 20px;
+}
+.m-l-30{
+	margin-left: 30px;
+}
+.m-r-10{
+	margin-right: 10px;
+}
+.m-r-20{
+	margin-right: 20px;
+}
+.m-r-30{
+	margin-right: 30px;
+}
+/*常用行高*/
+.l-h-20{
+	line-height: 20px;
+}
+.l-h-25{
+	line-height: 25px;
+}
+.l-h-30{
+	line-height: 30px;
+}
+.l-h-35{
+	line-height: 35px;
+}
+/*style for template |header|aside|footer|*/
+html,body{
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+/*left area*/
+.actived{
+	border-left: 2px solid #FFFFCC;
+	background-color: rgba(26,34,38,1);
+}
+.left{
+	background-color: rgba(34,45,50,1);
+	height: 100%;
+	padding: 0px;
+	position: fixed;
+}
+.left .welcome{
+	height: 40px;
+	line-height: 40px;
+	background-color: rgba(60,144,188,0.6);
+
+}
+.side-menu-color{
+	color: rgba(184,199,206,0.8);
+}
+.left span{
+	color: rgba(184,199,206,0.8);
+}
+.left ul li{
+	height: 50px;
+	line-height: 45px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 100%;
+}
+.left ul li i{
+	width: 10px;
+}
+.left a{
+	text-decoration: none;
+}
+.left a:hover{
+	color: rgba(184,199,206,0.8);
+}
+.left ul li:hover{
+		border-left: 2px solid #FFFFCC;
+	background-color: rgba(26,34,38,1);
+}
+.left aside .nav-list-item-actived{
+	border-left: 2px solid #FFFFCC;
+  background-color: rgba(26,34,38,1);
+}
+.left ul .menu-name{
+	background-color: rgba(26,34,38,0.3);
+}
+.child-menu{
+	/*background-color: rgba(184,199,220,0.1);*/
+	display: none;
+}
+/*left area end*/
+
+/**right area*/
+.right{
+	background-color: rgb(236,240,245);
+	padding: 0px;
+}
+/*header*/
+header{
+	background-color: rgba(60,144,188,0.6);
+	height: 40px;
+	line-height: 40px;
+}
+#userName{
+	display: inline-block;
+	float: right;
+}
+.notice-body{
+	margin-left: 20px;
+}
+/*header end*/
+
+/*main*/
+main{
+	padding: 15px;
+}
+main img{
+	width: 100%;
+}
+/*main end*/
+
+/*footer*/
+footer{
+	height: 40px;
+	line-height: 40px;
+	background-color: white;
+}
+/*footer end*/
+
+/**right area end*/

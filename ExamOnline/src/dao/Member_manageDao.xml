@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.Member_manageDao">
+	<select id="queryByClassId" resultType="ExamByClassMap">
+		SELECT t3.examplanId,
+		t4.paperName,t1.studentId,t1.studentName,t3.examState FROM studentinfo
+		t1,classinfo t2,examplaninfo t3,paperinfo t4
+		WHERE
+		t1.classId=t2.classId AND t2.classId=t3.classId AND
+		t3.paperId=t4.paperId and t3.classId=#{classId}
+	</select>
+	<!-- <resultMap type="ExamPlanInfo" id="ExamByClassMap"> <id property="examplanId" 
+		column="examplanId"/> <result property="examState" column="examState"/> <association 
+		property="paperInfo" javaType="PaperInfo"> <result property="paperName" column="paperName"/> 
+		</association> <association property="classInfo" javaType="ClassInfo"> <collection 
+		property="students" ofType="StudentInfo"> <id property="studentId" column="studentId"/> 
+		<result property="studentName" column="studentName"/> </collection> </association> 
+		</resultMap> -->
+	<select id="queryAll" parameterType="Page"  resultType="ExamByClassMap">
+		SELECT t3.examplanId,
+		t4.paperName,t1.studentId,t1.studentName,t3.examState FROM studentinfo
+		t1,classinfo t2,examplaninfo t3,paperinfo t4
+		WHERE
+		t1.classId=t2.classId AND t2.classId=t3.classId AND
+		t3.paperId=t4.paperId
+		<if test="pianyi!=-1">
+			LIMIT #{pianyi},#{rows}
+		</if>
+	</select>
+	<select id="count" resultType="int">
+		SELECT COUNT(*) FROM studentinfo
+		t1,classinfo t2,examplaninfo t3,paperinfo t4
+		WHERE
+		t1.classId=t2.classId AND t2.classId=t3.classId AND
+		t3.paperId=t4.paperId
+	</select>
+	<select id="queryClass" resultType="ClassInfo">
+		SELECT * FROM classinfo
+	</select>
+</mapper>

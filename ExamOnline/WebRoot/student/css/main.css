@@ -1,0 +1,97 @@
+.main_content{ width:1200px; margin:0 auto; position:relative}
+.bor{ background:#fff; border:1px solid #e0e3e9; border-radius:3px;}
+.main_right{margin: 0 auto 0 190px;}
+.main_right{overflow:hidden\9;}
+*html .main_right{ width:807px; overflow:hidden;}
+.ad{ width:1200px; margin:0 auto 20px;}
+.submit{-webkit-appearance: none; }
+.ui-ad-top-head  img{ width:1200px; height:90px;}
+/*adre*/
+.s-adress{white-space:nowrap; border-bottom:1px solid #f1f3f5; margin-bottom:20px;}
+.s-adress i{ width:19px; height:24px; float:left; background:url(adress_ico.png) no-repeat; margin:0 8px 0 0;}
+.s-adress a{ color:#666;}
+.s-adress a:hover{ color:#e45c40;}
+/*laoding*/
+.load{ width:140px; margin:30px auto; line-height:24px; margin-bottom:35px; color:#999; text-align:left;}
+.load a{ color:#999;}
+.load img{ width:20px; height:auto; margin:0 10px 0 0; float:left;}
+/*fenye*/
+.ui-page { height: 25px; line-height: 25px; padding:25px 0px 25px; text-align: center; clear: both; }
+.ui-page * { display: inline-block; vertical-align: middle; }
+.ui-page a, .ui-page b { display: inline-block; padding: 0px 9px; color: #333; background: #fff; border-radius:30px; border: 1px #ccc solid; height: 25px; margin: 0px 3px; font: bold 12px/25px Arial; color: #555; }
+.ui-page b { border: none; color: #555; margin-right: 0px; }
+.ui-page a.ui-page-turn { display: inline-block; padding: 0px 12px; font: normal 12px/25px "\u5b8b\u4f53"; content: '\3C'; }
+.ui-page a.ui-page-turn:hover { background: #f0f0f0; color: #333; border: 1px #ddd solid; -moz-box-shadow: #f5f5f5 1px 1px 2px; -webkit-box-shadow: #f5f5f5 1px 1px 2px; box-shadow: #f5f5f5 1px 1px 2px; }
+.ui-page a:hover { background: #f5f5f5; color: #333; }
+.ui-page a.z-on, .ui-page a.z-on:hover { background: #f06000; color: #FFF; border: 1px #f06000 solid; }
+.ui-page .ui-page-txt { display: inline-block; border: 1px #ccc solid; border-radius:30px; width: 40px; padding: 0px 5px; height: 25px; line-height: 25px; color: #555; box-shadow: 0px 1px 1px 2px #f8f8f8 inset; overflow: hidden; margin-right: 5px; outline: none; }
+.ui-page .ui-page-skip b { font-weight: normal; }
+.ui-page .ui-page-submit { font-weight: normal; }
+.btn-org { background-color: #f06000!important; border-color: #dc5800!important; color: #FFF!important }
+.btn-org:hover { background-color: #dc5800!important; border-color: #d15400!important; }
+.btn-green { background-color: #64ad75!important; border-color: #5ba36c!important; color: #FFF!important }
+.btn-green:hover { background-color: #549b65!important; border-color: #509861!important; }
+.pracl-dalist li .dal-but a.btn-org, .pracl-dalist li .dal-but a.btn-green { color: #fff!important }
+/*wushuju*/
+.no-data{width:350px; margin:80px auto; font-size:15px; color:#999; line-height:30px; text-align:center;}
+.no-data img{ margin-right:15px;}
+.no-data a{ color:#e45c40;}
+.no-data a:hover{ color:#f7795b;}
+.no-data .noda-text{padding-top:10px;}
+.no-data-kc{ width:450px;}
+.no-data-kc p span{ color:#f25130;}
+/*xiaoxitongzhi*/
+.mes-remind{ width:390px;  background:#fff; position:fixed; bottom:10px; right:10px; z-index:999; box-shadow:1px 2px 5px #e3e3e3; color:#fff !important;}
+*html .mes-remind{position:absolute; bottom:10px;  
+top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));}
+.mes-remind .mes-tit{ height:28px; line-height:28px; padding:10px 20px;  background:#e45c40; border-radius:3px 3px 0 0;}
+.mes-remind .mes-tit h3,.mes-tit span,.mes-relist .btn{ background:url(mes-ico.png) no-repeat;}
+.mes-remind .mes-tit h3{ font-size:14px; padding-left:30px; background-position:0 4px;}
+.mes-remind .mes-tit h3 p{ font-size:12px;}
+.mes-remind .mes-tit span{ width:12px; height:12px;background-position:0 -49px; float:right; margin-top:7px; cursor:pointer;}
+.mes-remind .mes-tit span:hover{transition: transform .2s ease-in 0s; transform: rotate(-180deg); -webkit-transform: rotate(-180deg); -moz-transform: rotate(-180deg); -webkit-transition: -webkit-transform .2s ease-in 0s; -moz-transition: -webkit-transform .2s ease-in 0s;}
+.mes-remind .mes-relist{ border:1px solid #dbdbdb; border-top:none; clear:both; padding:25px 20px; *padding:25px 20px 5px 20px;color:#333 !important; zoom:1; position:relative; border-radius:0 0 3px 3px;}
+.mes-remind .mes-relist:after{ display:block;visibility:hidden;clear:both;height:0;content:'.';}
+.mes-remind .mes-relist .bd{ overflow:hidden;}
+.mes-remind .mes-relist li.zt-img img{ width:100%; height:110px; margin-bottom:15px;}
+.mes-remind .mes-relist li .text{ height:44px; overflow:hidden; line-height:22px; color:#333;}
+.mes-remind .mes-relist li .text-t{ height:66px; text-indent:2em; color:#666;}
+.mes-remind .mes-relist li h4{ text-align:center; margin-bottom:12px;}
+.mes-remind .mes-relist li h4 a{ font-size:16px; color:#333; font-weight:bold;}
+.mes-remind .mes-relist li.pub-news p{ font-size:12px; color:#7e7e7e; text-indent:2em;}
+.mes-remind .mes-relist .but{ margin-top:15px;}
+.mes-remind .mes-relist .but span{ float:left; font-size:12px; font-size:12px; color:#999;}
+.mes-remind .mes-relist .but a{ float:right; width:115px; height:32px; line-height:32px; text-align:center; border-radius:2px; display:block; background:#e45c40; color:#fff;}
+.mes-remind .mes-relist .but a:hover{ background:#dc553a;}
+.mes-remind .mes-relist li.zhibo h4{ font-weight:bold;}
+.mes-remind .mes-relist li.zhibo .img{ float:left; margin-right:15px; border-radius:3px; box-shadow:0 1px 1px #f0f0f0; display:block; position:relative; overflow:hidden;}
+.mes-remind .mes-relist li.zhibo .img i{ width:34px; height:34px; display:block; background:url(zhi-gd.png) no-repeat 0 -38px; position:absolute; left:50%; top:50%; margin:-17px 0 0 -17px;}
+.mes-remind .mes-relist li.zhibo .img:hover i{ background-position:0 0;}
+.mes-remind .mes-relist li.zhibo img{ width:130px; height:auto;}
+.mes-remind .mes-relist li.zhibo dl{ color:#999; line-height:26px; font-size:12px;}
+.mes-remind .mes-relist li.zhibo dl span{ color:#333;}
+.mes-remind .mes-relist .zh-cont{ margin:10px 0 10px 0; border-bottom:1px dotted #e7e7e7; padding-bottom:10px;}
+.mes-remind .zhibo-btn{ text-align:center;}
+.mes-remind .mes-relist .but a.hui-btn{ margin-right:15px; background:#47ad76;}
+.mes-remind .mes-relist .but a.hui-btn:hover{background:#3fa26d;}
+.mes-remind .mes-relist .but-zh{ margin-right:48px;}
+/*ie6-ie8*/
+/*@media \0screen\,screen\9{
+	.main_content{ width:1000px; }
+	.ad,.ad img{width:1000px; height:auto}
+	.ui-ad-top-head  img{ width:1000px; height:80px;}
+}
+/*1000px*/
+@media screen and (max-width:1200px){
+	.main_content{ width:1000px;}
+	.ad{ width:1000px; height:auto;}
+	.ad img{ width:1000px; height:auto;}
+	.ui-ad-top-head  img{ width:1000px; height:80px;}
+	}
+/*960px*/
+@media screen and (max-width:1000px){
+	.main_content{ width:960px;}
+	.ad{ width:960px; height:auto;}
+	.ad img{ width:960px; height:auto;}
+	.ui-ad-top-head  img{ width:960px; height:77px;}
+	}*/

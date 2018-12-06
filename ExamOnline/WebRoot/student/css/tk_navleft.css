@@ -1,0 +1,65 @@
+﻿@charset "utf-8";
+/*zuocedaohang*/
+.tk_navleft { width: 168px; border-top: 4px solid #ea4f29; float: left; margin-right: 20px; overflow: hidden; }
+.tk_navleft .tk-ntit a { height: 54px; line-height: 54px; display: block; padding-left: 15px; font-size: 16px; }
+.tk_navleft .tk-ntit.this { border-top: 1px solid #f0f0f0; }
+.tk_navleft .tk-ntit.this a { background: #f7f8f9; border-top: 0; }
+.tk_navleft .tk-ntit a i { width: 12px; height: 12px; display: block; float: right; background: url(lenav_ico.png) no-repeat; margin: 22px 15px 0 0; overflow: hidden; }
+.tk_navleft .tk-ntit a:hover i, .tk_navleft .tk-ntit.this a i { background-position: 0 -16px; margin-top: 20px; }
+.tk_navleft .tk-ntit a:hover i, .tk_navleft .tk-ntit.this a i, .tk_navleft dt a:hover b { transition: transform .2s ease-in 0s; transform: rotate(-180deg); -webkit-transform: rotate(-180deg); -moz-transform: rotate(-180deg); -webkit-transition: -webkit-transform .2s ease-in 0s; -moz-transition: -webkit-transform .2s ease-in 0s; }
+/*erji*/
+.tk-box { padding-bottom: 10px; border-top: 1px solid #f0f0f0; }
+.tk_navleft dt a { height: 35px; line-height: 35px; display: block; padding-left: 10px; border-radius:10px}
+.tk_navleft dt a i { width: 22px; height: 22px; display: block; float: left; background-image: url(lenav_ico.png); background-repeat: no-repeat; margin: 6px 10px 0 0; }
+*html .tk_navleft dt a i { margin-top: 12px !important; }
+.tk_navleft dt.tk-home a i { background-position: -22px -370px; }
+.tk_navleft dt.ztfs a i { background-position: -22px -51px; }
+.tk_navleft dt.wdjl a i { background-position: -22px -83px; }
+.tk_navleft dt.pgph a i { background-position: -22px -111px; }
+.tk_navleft dt.free a i { background-position: 0 -170px; }
+.tk_navleft dt.m_course a i { background-position: 0 -196px; }
+.tk_navleft dt.live a i { background-position: 0 -223px; }
+.tk_navleft dt.integral a i { background-position: 0 -250px; }
+.tk_navleft dt.client a i { background-position: 0 -277px; }
+.tk_navleft dt.data a i { background-position: 0 -304px; }
+.tk_navleft dt.order a i { background-position: 0 -332px; }
+.tk_navleft dt.collect a i { background-position: 0 -406px; }
+.tk_navleft dt.this { background: #fff0ed; }
+.tk_navleft dt.this a { color: #ee491f; }
+.tk_navleft dt{ margin: 5px 5px 4px; border-radius: 3px;}
+.tk_navleft dt:hover{ background:#f5f5f5;} 
+.tk_navleft dt.ztfs a,.tk_navleft dt.wdjl a,.tk_navleft dt.pgph a{ border-top:#eee dashed 1px;}
+.tk_navleft dt.ztfs:hover,.tk_navleft dt.wdjl:hover,.tk_navleft dt.pgph:hover{ background:#fff;}
+.tk_navleft dt.home{ margin:10px;}
+.tk_navleft dt.myorder,.tk_navleft dt.myexam,.tk_navleft dt.mypoints,.tk_navleft dt.mycomments,.tk_navleft dt.mynews,.tk_navleft dt.mymoney,.tk_navleft dt.account,.tk_navleft dt.admin,.tk_navleft dt.myquan,.tk_navleft dt.recommend { margin:0 10px 2px 10px;}
+.tk_navleft dt a:hover i, .tk_navleft .ztfs.this i { background-position: 0 -51px; transition: all .2s; -webkit-transition: all .2s; -moz-transition: all .2s; }
+.tk_navleft dt.tk-home a:hover i, .tk_navleft dt.tk-home.this a i { background-position: 0 -370px; }
+.tk_navleft dt.wdjl a:hover i, .tk_navleft dt.wdjl.this a i { background-position: 0 -83px; }
+.tk_navleft dt.pgph a:hover i, .tk_navleft dt.pgph.this a i { background-position: 0 -111px; }
+.tk_navleft dt.free a:hover i, .tk_navleft dt.free.this a i { background-position: -22px -170px; }
+.tk_navleft dt.m_course a:hover i, .tk_navleft dt.m_course.this a i { background-position: -22px -196px; }
+.tk_navleft dt.live a:hover i, .tk_navleft dt.live.this a i { background-position: -22px -223px; }
+.tk_navleft dt.integral a:hover i, .tk_navleft dt.integral.this a i { background-position: -22px -250px; }
+.tk_navleft dt.client a:hover i, .tk_navleft dt.client.this a i { background-position: -22px -277px; }
+.tk_navleft dt.data a:hover i, .tk_navleft dt.data.this a i { background-position: -22px -304px; }
+.tk_navleft dt.order a:hover i, .tk_navleft dt.order.this a i { background-position: -22px -332px; }
+.tk_navleft dt.collect a:hover i, .tk_navleft dt.collect.this a i { background-position: -22px -406px; }
+.tk_navleft dd { height: 30px; margin:0 10px 0 30px; overflow: hidden; }
+.tk_navleft dd a { height: 25px; line-height: 25px; display: block; margin-bottom: 5px; padding-left:17px; color: #6a737a; }
+.tk_navleft dd a.mor { background: url(lenav_ico.png) no-repeat 30px -145px; }
+.tk_navleft dd a.mor:hover { background: #f0f0f0 url(lenav_ico.png) no-repeat 30px -129px; }
+.tk_navleft dd a em { font-size: 12px; color: #e85a39; }
+.tk_navleft dd a:hover, .tk_navleft dd.this a { background: #e45c40; color: #fff; border-radius: 2px; }
+.tk_navleft dd a:hover em, .tk_navleft dd.this a em { color: #ffeae5; }
+.tk_navleft dd.vip-tk{ margin-bottom:3px;}
+.tk_navleft dd.vip-tk a{ color:#3fa82b;}
+.tk_navleft dd.vip-tk a:hover,.tk_navleft dd.vip-tk.this a{ background:#3fa82b; color:#fff;}
+.tk_navleft .tk-ntit.course { border-top: none }
+.tk-box.course { padding: 10px 0; border-bottom: 1px solid #f0f0f0; }
+.tk-box.course dt:hover {background: #f5f5f5 }
+.tk-box.course dt { margin:0 10px 4px; border-radius: 3px; }
+.tk-box.course dt a { height: 42px; line-height: 42px; }
+.tk-box.course dt a i { margin: 10px 10px 0 0; }
+.tk-box.course dt.this { background: #fff0ed; }
+.tk-box.course dt.this a { color: #ee491f; }
+.tk_navleft dt.ztfs a:hover,.tk_navleft dt.wdjl a:hover,.tk_navleft dt.pgph a:hover{ color:#333;}

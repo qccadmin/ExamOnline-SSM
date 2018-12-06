@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.StudentInfoDao">
+	<resultMap type="StudentInfo" id="queryStudent">
+		<id column="studentId" property="studentId" />
+		<result column="studentName" property="studentName" />
+		<result column="studentPwd" property="studentPwd" />
+		<!-- 班级 -->
+		<association property="classInfo" javaType="ClassInfo">
+			<id column="classId" property="classId" />
+			<result column="className" property="className" />
+		</association>
+	</resultMap>
+
+	<!-- 分页实现 -->
+	<parameterMap type="java.util.Map" id="getStudentParameterMap">
+		<parameter property="student" resultMap="queryStudent" />
+		<parameter property="startIndex" resultMap="queryStudent" />
+		<parameter property="pageShow" resultMap="queryStudent" />
+	</parameterMap>
+
+	<!-- 获取学生集合 -->
+	<select id="getStudents" parameterMap="getStudentParameterMap"
+		resultMap="queryStudent">
+		SELECT a.*,b.className FROM StudentInfo a
+		INNER JOIN ClassInfo b ON
+		a.classId=b.classId
+		<where>
+			<if test="studentId != null">
+				studentId=#{studentId}
+			</if>
+			<if test="classInfo != null">
+				<if test="classInfo.classId != null">
+					b.classId=#{classInfo.classId}
+				</if>
+			</if>
+		</where>
+		<if test="startIndex != null and pageShow != null">
+			LIMIT #{startIndex}, #{pageShow}
+		</if>
+	</select>
+
+	<select id="getStudentById" parameterType="int" resultMap="queryStudent">
+		SELECT a.*,b.className FROM StudentInfo a
+		INNER JOIN ClassInfo b ON
+		a.classId=b.classId
+		WHERE a.studentId=#{studentId}
+	</select>
+	<update id="isUpdateStudent" parameterType="StudentInfo">
+		UPDATE StudentInfo
+		SET
+		studentName=#{studentName}, studentPwd=#{studentPwd},
+		classId=#{classInfo.classId}
+		WHERE studentId=#{studentId}
+	</update>
+
+	<delete id="isDelStudent" parameterType="int">
+		DELETE FROM StudentInfo
+		WHERE studentId=#{studentId}
+	</delete>
+
+	<insert id="isAddStudent" parameterType="StudentInfo">
+		INSERT INTO StudentInfo
+		VALUES(NULL, #{studentName}, #{studentPwd},
+		#{classInfo.classId})
+	</insert>
+
+	<select id="getStudentTotal" resultType="int">
+		SELECT COUNT(studentId)
+		FROM StudentInfo
+	</select>
+
+	<!-- 学生重置密码 -->
+	<update id="isResetPwdWithStu" parameterType="StudentInfo">
+		UPDATE studentinfo
+		a
+		SET a.studentPwd=#{studentPwd}
+		WHERE a.studentId=#{studentId}
+	</update>
+
+	<!-- 获取指定班级下的所有学生 -->
+	<select id="getStudentsByClassId" parameterType="int" resultMap="queryStudent">
+		SELECT a.*,b.* FROM studentinfo a,classinfo b WHERE
+		a.classId=b.classId and a.classId=#{classId}
+	</select>
+	<select id="queryAll" parameterType="Page" resultMap="StudentMap">
+		SELECT *
+		FROM StudentInfo limit #{pianyi},#{rows}
+	</select>
+
+	<insert id="insert">
+		INSERT INTO
+		StudentInfo(studentName,studentPwd,classId,birthday,school,address,phone)
+		VALUES(#{studentName},#{studentPwd},#{classInfo.classId},STR_TO_DATE(#{birthday},'%Y-%m-%d'),#{school},#{address},#{phone})
+	</insert>
+	<select id="fuzzyQuery" resultMap="StudentMap">
+		SELECT * FROM StudentInfo
+		<trim prefix="WHERE" prefixOverrides="AND |OR ">
+			<if test="id != 0">
+				classId = #{id}
+			</if>
+			<if test="sName != null and sName != ''">
+				and studentName like '%${sName}%'
+			</if>
+		</trim>
+		limit #{page.pianyi},#{page.rows}
+	</select>
+
+	<select id="fuzzyQueryCount" resultType="int">
+		SELECT count(*) FROM StudentInfo
+		<trim prefix="WHERE" prefixOverrides="AND |OR ">
+			<if test="id != 0">
+				classId = #{id}
+			</if>
+			<if test="sName != null and sName != ''">
+				and studentName like '%${sName}%'
+			</if>
+		</trim>
+	</select>
+	<select id="queryById" parameterType="int" resultMap="StudentMap">
+		SELECT *
+		from StudentInfo
+		WHERE studentId=#{studentId}
+	</select>
+	<resultMap type="StudentInfo" id="StudentMap">
+		<id column="studentId" property="studentId" />
+		<result column="studentName" property="studentName" />
+		<result column="studentPwd" property="studentPwd" />
+		<result column="birthday" property="birthday" />
+		<result column="school" property="school" />
+		<result column="address" property="address" />
+		<result column="phone" property="phone" />
+		<!-- 班级 -->
+		<association property="classInfo" javaType="ClassInfo">
+			<id column="classId" property="classId" />
+		</association>
+	</resultMap>
+
+	<select id="getExamPlanInfoById" parameterType="int"
+		resultMap="queryExamPlanInfo">
+		SELECT
+		a.examplanId,a.examState,a.startTime,a.overTime,a.paperId,d.paperName,d.courseId,e.courseName,e.teacherId,f.teacherName,b.classId,b.className
+		FROM examplaninfo a,classinfo b,studentinfo c,paperinfo d,courseinfo
+		e,teacherinfo f WHERE f.teacherId=e.teacherId AND
+		e.courseId=d.courseId AND a.paperId=d.paperId AND a.classId=b.classId
+		AND c.classId=b.classId AND c.studentId=#{studentId}
+		<!-- <if test="examState=2">AND a.examState=2</if> -->
+	</select>
+	<resultMap type="ExamPlanInfo" id="queryExamPlanInfo">
+		<id column="examplanId" property="examplanId" />
+		<result column="startTime" property="startTime" />
+		<result column="overTime" property="overTime" />
+		<result column="examState" property="examState" />
+		<!-- 试卷 -->
+		<association property="paperInfo" javaType="PaperInfo">
+			<id column="paperId" property="paperId" />
+			<result column="paperName" property="paperName" />
+			<association property="courseInfo" javaType="CourseInfo">
+				<id column="courseId" property="courseId" />
+				<result column="courseName" property="courseName" />
+				<association property="teacherInfo" javaType="TeacherInfo">
+					<id column="teacherId" property="teacherId" />
+					<result column="teacherName" property="teacherName" />
+				</association>
+			</association>
+		</association>
+		<!-- 班级 -->
+		<!-- 班级 -->
+		<association property="classInfo" javaType="ClassInfo">
+			<id column="classId" property="classId" />
+			<result column="className" property="className" />
+		</association>
+	</resultMap>
+
+	<select id="studentLogin" parameterType="StudentInfo" resultMap="loginStudentMap">
+		SELECT s.studentId sid,s.studentName sname,c.className
+		cname FROM
+		studentinfo s,classinfo c where studentId=#{studentId} and
+		studentPwd=#{studentPwd} AND s.classId=c.classId
+	</select>
+	<select id="queryAllStudent" resultMap="StudentMap">
+		SELECT * FROM StudentInfo
+	</select>
+
+	<update id="editClass" parameterType="int">
+		UPDATE studentinfo
+		SET classId=null
+		WHERE studentId=#{id}
+	</update>
+	<select id="queryEmptyStudent" resultMap="StudentMap">
+		SELECT * FROM
+		studentInfo WHERE classId IS NULL
+	</select>
+	<resultMap type="StudentInfo" id="loginStudentMap">
+		<id property="studentId" column="sid" />
+		<result property="studentName" column="sname" />
+		<association property="classInfo" javaType="ClassInfo">
+			<result property="className" column="cname" />
+		</association>
+	</resultMap>
+	<select id="examState" parameterType="int" resultType="ExamPlanInfo">
+		SELECT a.examState FROM examplaninfo a,classinfo
+		b,studentinfo c,paperinfo d,courseinfo e,teacherinfo f WHERE
+		f.teacherId=e.teacherId AND e.courseId=d.courseId AND
+		a.paperId=d.paperId AND a.classId=b.classId AND c.classId=b.classId
+		AND c.studentId=#{studentId} AND d.paperId=#{paperId}
+	</select>
+
+</mapper>

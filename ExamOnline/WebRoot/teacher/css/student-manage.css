@@ -1,0 +1,188 @@
+//默认
+.m-0{margin:0;}
+body{
+	font-size:14px;
+	font-family:Arial,Verdana,Tahoma,"微软雅黑","黑体";
+	line-height:120%;
+	background:#fff;
+	margin:0;
+	overflow-x:hidden;
+	position: relative;
+}
+main{
+	min-height: 600px;
+}
+#pagination{
+	width: 260px;
+	margin: 0 40%;
+}
+#userThead .checkbox{
+	margin: 0px;
+	}
+#userTbody .checkbox{
+	margin:0px;
+	
+}
+
+.zz{
+	width: 100%;
+	height: 100%;
+	background-color: gray;
+	opacity: 0.5;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 3;
+}
+
+.add-user{
+	width: 30rem;
+	height: 32rem;
+	background-color: white;
+	border: 0.2rem lightblue solid;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	display: none;
+	z-index: 4;
+}
+
+.add-manager{
+	width: 30rem;
+	height: 22rem;
+	background-color: white;
+	border: 0.2rem lightblue solid;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	display: none;
+	z-index: 4;
+}
+.add-header{
+	height: 6%;
+	background-color: lightblue;
+	position: relative;
+	padding: 4px 0;
+}
+.add-manager-header{
+	height: 10%;
+	background-color: lightblue;
+	position: relative;
+	padding: 4px 0;
+}
+.add-header i{
+	border: none;
+	background-color: lightblue;
+	position:absolute;
+	right: 0;
+	font-size: 30px;
+	font-weight: 300;
+	cursor: pointer;
+}
+#addUserInform,#cancelChange{
+	width: 60px;
+}
+.add-manager-header input{
+	border: none;
+	background-color: lightblue;
+	position:absolute;
+	right: 0;
+}
+td span{
+	padding: 0 25px;
+	}
+.editor{
+	padding: 8% 8% 8% 0;
+	font-size:14px;
+	font-family:Arial,Verdana,Tahoma,"微软雅黑","黑体";
+}
+.editor-manager{
+	padding: 4%;
+	font-size:14px;
+	font-family:Arial,Verdana,Tahoma,"微软雅黑","黑体";
+}
+}
+.form-horizontal .form-button-user {
+	margin: 10% 20% 5% 45%;
+}
+.form-horizontal .form-button-manager .col-sm-5 {
+	width:100%;
+}
+.form-horizontal .form-button-user .col-sm-5 {
+	width: 100%;
+
+}
+.row{
+	margin: 0px;
+	position:relative;
+}
+
+.filter #btn1{
+	width: 200px;
+	position: relative;
+}
+#pagination{
+	width: 250px;
+	margin: 0px 40%;
+}
+.fliter-box{
+	width: 50%;
+	height: 250px;
+	position: absolute;
+	top: 35px;
+	left: 90px;
+	display: none;
+	z-index: 4;
+}
+#fliterBox li{
+	cursor:pointer;
+}
+.year{
+	height: 100%;
+	padding: 0px;
+}
+.list-item{
+	list-style: none;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border-bottom: 1px solid rgba(91,192,222,0.7);
+}
+.nav-actived{
+	background-color: rgba(91,192,222,0.5);
+}
+.subject{
+	padding: 0px;
+	border-left: 2px solid rgba(91,192,222,0.5);
+	height: 100%;
+}
+.subject ul li:hover,.year ul li:hover{
+	font-size:16px;
+	background-color: rgba(91,192,222,0.2);
+}
+
+.addUser{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.bgc-white{
+	background-color: white;
+}
+.formtips{
+	color: red ;
+	}
+tbody tr td i{
+	color: cornflowerblue;
+	padding: 0 7px;
+	}
+tbody tr:nth-last-of-type{
+	color: cornflowerblue;
+	}

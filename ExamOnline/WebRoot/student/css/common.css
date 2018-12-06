@@ -1,0 +1,732 @@
+@charset"utf-8"
+/***************************reset**************************/
+*{ 
+	margin:0;
+	padding:0;
+	boder-sizing:boder-box;
+  moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+body{
+	font-size:14px;
+	font-family:Arial,Verdana,Tahoma,"微软雅黑","黑体";
+	line-height:120%;
+	/*background:#fff;*/
+	background-color: white;
+	margin:0;
+	overflow-x:hidden;
+}
+p,h1,h2,h3,h4,h5,h6,ul,ol,dl,li,form,table{
+	margin:0;padding:0;
+}
+a,img{
+	border:none;
+	text-decoration: none;
+}
+img{
+	vertical-align:middle;
+	border:0;
+}
+li{list-style:none;}
+
+/**********************media query***********************/
+
+/*********************Gobal Classes**********************/
+/*清除浮动*/
+.clearfix:after{
+	clear: both;
+	content: '';
+	display: block;
+}
+/*For IE*/
+.clearfix{
+	zoom: 1;
+}
+/*常用颜色*/
+.color-white{
+	color: white;
+}
+.bgc-white{
+	background-color: white;
+}
+.color-black{
+	color: black;
+}
+.bgc-black{
+	background-color: black;
+}
+.color-welcome{
+	color:rgba(50,104,133,1);
+}
+.bgc-welcome{
+	background-color: rgba(50,104,133,1);
+}
+.color-header{
+	color:rgba(130,182,211,1);
+}
+.bgc-header{
+	background-color: rgba(130,182,211,1);
+}
+.color-primary{
+	color: rgba(66,139,202,1);
+}
+.bgc-primary{
+	background-color: rgba(66,139,202,1);
+}
+.color-success{
+	color: rgba(92,184,92,1);
+}
+.bgc-success{
+	background-color: rgba(92,184,92,1);
+}
+.color-info{
+	color: rgba(91,192,222,1);
+}
+.bgc-info{
+	background-color: rgba(91,192,222,1);
+}
+.color-wraning{
+	color: rgba(240,173,78,1);
+}
+.bgc-wraning{
+	background-color: rgba(240,173,78,1);
+}
+.color-danger{
+	color: rgba(217,83,79,1);
+}
+.bgc-danger{
+	background-color: rgba(217,83,79,1);
+}
+/*文本对齐方式*/
+.t-l{ 
+	text-align:left;
+}
+.t-c{ 
+	text-align:center;
+}
+.t-r{ 
+	text-align:right;
+}
+/*块状元素水平居中*/
+.m-c{
+	margin: 0px auto;
+}
+/*浮动方向*/
+.f-l{
+	float: left;
+}
+.f-r{
+	float: right;
+}
+/*字体大小*/
+.f-b{
+	font-weight: bold;
+}
+.f-12{ 
+	font-size:12px;
+}
+.f-13{ 
+	font-size:13px;
+}
+.f-14{ 
+	font-size:14px;
+}
+.f-16{ 
+	font-size:16px;
+}
+.f-18{ 
+	font-size:18px;
+}
+.f-20{ 
+	font-size:20px;
+}
+/*显示方式*/
+.block{
+	display: block;
+}
+.inline{
+	display: inline;
+}
+.inline-block{
+	display: inline-block;
+}
+/*常用外边距*/
+.m-b-10{
+	margin-bottom: 10px;
+}
+.m-b-20{
+	margin-bottom: 20px;
+}
+.m-b-30{
+	margin-bottom: 30px;
+}
+.m-t-10{
+	margin-top: 10px;
+}
+.m-t-20{
+	margin-top: 20px;
+}
+.m-t-30{
+	margin-top: 30px;
+}
+.m-l-10{
+	margin-left: 10px;
+}
+.m-l-20{
+	margin-left: 20px;
+}
+.m-l-30{
+	margin-left: 30px;
+}
+.m-r-10{
+	margin-right: 10px;
+}
+.m-r-20{
+	margin-right: 20px;
+}
+.m-r-30{
+	margin-right: 30px;
+}
+/*常用行高*/
+.l-h-20{
+	line-height: 20px;
+}
+.l-h-25{
+	line-height: 25px;
+}
+.l-h-30{
+	line-height: 30px;
+}
+.l-h-35{
+	line-height: 35px;
+}
+/*style for template |header|aside|footer|*/
+html,body{
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+/*left area*/
+.actived{
+	border-left: 2px solid #FFFFCC;
+	background-color: rgba(26,34,38,1);
+}
+
+.left .welcome{
+	height: 40px;
+	line-height: 40px;
+	background-color: rgba(60,144,188,0.6);
+
+}
+.left a{
+	color: rgba(184,199,206,0.8);
+}
+.left span{
+	color: rgba(184,199,206,0.8);
+}
+.left ul li{
+	height: 50px;
+	line-height: 45px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 100%;
+}
+.left ul li i{
+	width: 10px;
+}
+.left ul li:hover{
+		border-left: 2px solid #FFFFCC;
+	background-color: rgba(26,34,38,1);
+}
+.left ul .menu-name{
+	background-color: rgba(26,34,38,0.3);
+}
+.left ul .child-menu{
+	background-color: rgba(184,199,220,0.1);
+	display: none;
+}
+/*left area end*/
+
+/**right area*/
+.right{
+
+	padding: 0px;
+}
+
+
+.notice-body{
+	margin-left: 20px;
+}
+/*header end*/
+
+
+
+
+
+/**right area end*/
+
+
+/*header*/
+header{
+	height: 8%;
+	padding-right: 10px;
+	position: relative;
+}
+
+header img{
+	margin-left:5%;
+}
+header strong{
+	font-size: 18px;
+	color:#e64a4a;
+	width:20% ;
+}
+header ul{
+	
+	width: 50%;
+	height: 40px;
+	line-height: 40px;
+	
+}
+header span{
+	float: left;
+	width: 20%;
+	height: 40px;
+	line-height: 40px;
+	
+}
+.a1{
+	color:#e64a4a;
+}
+/**header area end*/
+
+
+/**index section area */
+.myTab-all{
+	border-bottom: none;
+	position: absolute;
+	bottom: 0;
+	left: 30%;
+	
+}
+
+.myTab-all li{
+	color: #666666;
+}
+#userName{
+	
+	width: 20%;
+	display: inline-block;
+	float: right;
+	text-align: right;
+	margin-right:10%;}
+	
+	
+.nav li  a{
+	color:lightgray ;
+}
+.nav li  a:active{
+	border-bottom: lightsteelblue;
+}
+.section{
+	height: 84%;
+	width: 100%;
+    background-color:#f8f9fb;
+}
+
+.tab-content{
+	width: 100%;
+	height: 100%;	
+}
+
+
+#myClass{
+	
+	overflow: auto;
+	overflow-x: hidden;
+	width: 80%;
+	height: 80%;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	background-color: #FFFFFF;
+	padding: 3%;
+}
+.icon{
+	color: lightskyblue;
+	
+}
+
+
+/*考试界面*/
+#test{
+	overflow: auto;
+	overflow-x: hidden;
+	width: 80%;
+	height: 80%;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #FFFFFF;
+	padding: 3%;
+}
+.one,.two,.three,.four{
+	width: 24%;
+	height: 50%;
+	background-color: #f8f9fb;
+	float: left;
+	margin-right:5px;
+	margin-bottom: 5px;
+	position: relative;	
+}
+.one i,.two i,.three i,.four i {
+	height:30%;
+	font-size:70px;
+	position: absolute;
+	top: 5%;
+	left: 40%;
+}
+.one  h3,.two  h3,.three  h3,.four  h3{
+	font-size: 18px;
+	color: #644;
+	position: relative;
+	top: 45%;
+	/*! left: 33%; */
+	text-align: center;
+}
+.one p,.two p,.three p,.four p {
+	font-size: 12px;
+	color: lightgray;
+	position: absolute;
+	top: 65%;
+	left: 33%;
+}
+.one button, .two button,.three button,.four button{
+	width: 30%;
+	
+	position: absolute;
+	bottom: 2%;
+	left: 35%;
+	
+}
+.one a,.two a,.three a,.four a {
+	
+	display: block;
+	height: 20%;
+	width: 40%;
+	position: relative;
+	top: 65%;
+	left: 38%;
+}
+#timer{
+	color: lightcoral;
+}
+
+/*history area*/
+
+#history{
+	overflow: auto;
+	width: 80%;
+	height: 80%;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #FFFFFF;
+	padding: 3%;
+	
+}
+
+.history-table{
+	position:relative;
+	margin:auto;
+	left:0;
+	right:0;
+	
+	overflow: auto;
+	
+	border:1;
+}
+
+#home{
+	
+	width: 80%;
+    height: 80%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #FFFFFF;
+    padding: 3%
+
+}
+#detailed{
+	
+	margin: auto;
+	
+
+	line-height: 20px;
+	
+}
+/*#detailed li:nth-child(1){
+	
+	background-color: #f5f5f5;
+}*/
+#detailed li{
+	border-bottom: 1px solid #84ccd5;
+	
+	line-height:30px;
+
+	padding-top: 5px;
+		
+}
+#detailed li:last-child{
+	border-bottom: none;
+}
+#detailed li span{
+
+	display: block;
+	float: right;
+	padding-right: 20px;
+}
+
+
+/*student erea end*/
+
+
+/*index area*/
+#login{
+	width: 15%;
+	text-align: center;
+	color: #e64a4a;
+	position:absolute;
+	right:5%;
+	top:30%;
+	
+}
+
+.nav ul li  a:active{
+	border-bottom: lightblue;
+}
+.section{
+	height: 84%;
+	width: 100%;
+	background-color:#f8f9fb ;
+}
+
+.picture{
+	height:38%;
+	width: 75%;
+	margin: auto;
+	position: absolute;
+	top: -50%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.explain{
+	position:absolute;
+	top:65%;
+	left:30%;
+	right:0;
+}
+.explain h2{
+	padding-left: 15%;
+	line-height:40px;
+	color:#e6c3d0;
+	}
+
+.explain h4{
+	line-height:30px;
+	color:#29bdb9;
+}
+
+.pic_concent img{
+	width: 100%;
+	height:300px;
+	overflow: hidden;
+}
+
+/*login area*/
+.ion-log-in1{
+	height:50%;
+	width:30%;
+	position:absolute;
+	margin:auto;
+	left:0;
+	right:0;
+	top:0;
+	bottom: 0;
+	background-color:#FFF;
+	padding:20px ;
+}
+.self-motion{
+	position:absolute;
+	left:13%;
+} 
+.ion-log-in1 span{padding:13%;}
+
+.p1{
+	font-size:20px;
+	line-height:68px;
+	text-align: center;
+}
+.form-denglu input{
+	width:80%;
+	height:35px;
+	margin-left: 10%;
+	margin-bottom:20px;
+	}
+.gaimi{
+	float: right;
+	margin-right:10%;
+}
+.btn-info{
+	display: block;
+	
+}
+
+
+/*footer*/
+
+.footer{
+	width: 100%;
+	height: 8%;
+	line-height: 40px;
+	color: #e6fffe;
+	text-align: center;
+	background-color: #838485;
+	float: left;
+	
+}
+/*footer end*/
+
+
+/*question area*/
+#m__ruleInfo{
+	z-index: 1001;  
+	position: fixed; 
+	left: 0px; 
+	top: 1px;
+	
+}
+
+#questionModule {
+width: 100%;
+min-height: 300px;
+background: none;
+overflow: hidden;
+position: relative;
+min-height: 866px;
+}
+
+#questionModule > ul {
+    width: 100%;
+    height: auto;
+}
+
+#questionModule.cross-range {
+    margin-bottom: 20px;
+}
+
+    #questionModule.cross-range > ul {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+        #questionModule.cross-range > ul > li {
+            float: left;
+            width: 100%;
+            overflow: hidden;
+        }
+.m-secpart{
+	margin-top: 50px;
+}
+.ui-progress-sub{
+	width: 100%;
+	
+}
+.pra-right-con{
+	position: fixed;
+	margin-top: 50px;
+	height: 80%;
+}
+
+#btn__insert{
+	position: absolute;
+	top: 0;left: 0;
+	width: 100px;
+	height: 40px
+}
+/*#m__rightPart{
+	
+	z-index: 1001; 
+	position: static;
+	 top: auto; 
+	 bottom: auto; 
+	left: auto;
+}*/
+
+.bd{
+	min-height: 70px;
+	max-height: 386px;
+	
+}
+/*模态框考试提醒*/
+#myModal{
+	z-index: 1001 !important;
+	
+}
+#myModal a{
+	display: inherit;
+	width: 100%;
+	height: 100%;
+	color:gainsboro;
+}
+.modal-content{
+	border-radius: 10px;
+	border: 1px solid #337ab7;
+}
+.modal-body{
+	border-bottom: 1px solid #C3C3C3;
+}
+
+.modal-header{
+
+	background-color: #337ab7;
+}
+.modal-body-topic{
+	border: 1px solid #C3C3C3;
+	border-radius: 2px;
+}
+
+.modal-body-topic li{
+	padding: 4px;
+	border-bottom: 1px solid #C3C3C3;
+}
+
+/*交卷部分*/
+.btn__submit{
+	cursor: pointer;
+}
+#testUp{
+	
+}
+/*.modal-backdrop{
+	z-index: 1000;
+}*/

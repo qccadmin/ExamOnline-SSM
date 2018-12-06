@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<properties resource="mysqldb.properties"></properties>
+  <settings>
+      <setting name="logImpl" value="LOG4J"/>
+   </settings>
+   <typeAliases>
+     <package name="entity"/>
+   </typeAliases>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}" />
+                <property name="url" value="${url}"/>
+                <property name="username" value="${name}" />
+                <property name="password" value="${pwd}" />
+                
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="dao/SubjectLibraryDao.xml"/>
+        <mapper resource="dao/GradeDetailsDao.xml"/>
+        <mapper resource="dao/ExamGradeDao.xml"/>
+        <mapper resource="dao/StudentInfoDao.xml"/>
+        <mapper resource="dao/ClassInfoDao.xml"/>
+        <mapper resource="dao/TeacherInfoDao.xml"/>
+        <mapper resource="dao/Exam_summaryDao.xml"/>
+        <mapper resource="dao/Member_manageDao.xml"/>
+        <mapper resource="dao/Exam_manageDao.xml"/>
+        <mapper resource="dao/ResultInfoDao.xml"/>
+        <mapper resource="dao/TitleInfoDao.xml"/>
+        <mapper resource="dao/ExamResultDao.xml"/>
+         <mapper resource="dao/StudentStateDao.xml"/>
+    </mappers>
+</configuration>

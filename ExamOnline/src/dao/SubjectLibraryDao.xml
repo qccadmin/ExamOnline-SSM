@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.SubjectLibraryDao"><!-- 写对应类名全路径 -->
+	<select id="seachCourseByTeacherID" resultMap="CourseInfoMap"
+		parameterType="int">
+		SELECT * FROM courseinfo WHERE teacherId=#{id}
+	</select>
+	<resultMap type="CourseInfo" id="CourseInfoMap">
+		<id property="courseId" column="courseId" />
+		<result property="courseName" column="courseName" />
+		<association property="teacherInfo" javaType="TeacherInfo">
+			<id property="teacherId" column="teacherId" />
+		</association>
+	</resultMap>
+	<select id="seachPaperByCourseID" resultType="PaperInfo"
+		parameterType="int">
+		SELECT * FROM paperinfo WHERE courseId=#{id}
+	</select>
+	<select id="seachPaperNoTit" resultType="PaperInfo"
+		parameterType="int">
+		SELECT paperinfo.paperId,paperinfo.paperName FROM
+		paperinfo,courseinfo WHERE paperinfo.isAdd=0 AND
+		courseinfo.teacherId=#{id} AND courseinfo.courseId=paperinfo.courseId
+	</select>
+	<insert id="insertExcelTit" parameterType="TitleInfo">
+		INSERT INTO
+		titleinfo(titleCat,titleStem,optionA,optionB,optionC,optionD,answerRight,answerScore,titleinfo.analyze,paperId)
+		VALUES
+		(#{titleCat},#{titleStem},#{optionA},#{optionB},#{optionC},#{optionD},#{answerRight},#{answerScore},#{analyze},#{paperInfo.paperId})
+	</insert>
+	<select id="seachPaperByPaperId" parameterType="int" resultType="TitleInfo">
+		SELECT
+		titleinfo.titleId,titleinfo.titleCat,titleinfo.titleStem,titleinfo.optionA,titleinfo.optionB,titleinfo.optionC,titleinfo.optionD,titleinfo.answerRight,titleinfo.answerScore,titleinfo.analyze
+		FROM courseinfo,paperinfo,titleinfo WHERE
+		courseinfo.teacherId=#{teacherid}
+		AND
+		titleinfo.paperId=paperinfo.paperId AND
+		paperinfo.courseId=courseinfo.courseId AND titleinfo.paperId=#{id}
+	</select>
+	<update id="updateTitle">
+		UPDATE titleinfo SET
+		titleStem=#{ti.titleStem},optionA=#{ti.optionA},optionB=#{ti.optionB},optionC=#{ti.optionC},optionD=#{ti.optionD},answerRight=#{ti.answerRight},titleinfo.analyze=#{ti.analyze}
+		WHERE titleId=#{ti.titleId} AND paperId IN (SELECT paperinfo.paperId
+		FROM courseinfo,paperinfo WHERE courseinfo.teacherId=#{teacherId} AND
+		courseinfo.courseId=paperinfo.courseId)
+	</update>
+	<delete id="deleteTitle" parameterType="int">
+		DELETE FROM titleinfo WHERE titleId=#{titid} AND paperId IN
+		(SELECT paperinfo.paperId FROM courseinfo,paperinfo WHERE
+		courseinfo.teacherId=#{teacherId} AND courseinfo.courseId=paperinfo.courseId)
+	</delete>
+	<update id="Updatepaperinfo" parameterType="int">
+		UPDATE paperinfo SET isadd=1 WHERE paperId=#{paperId}
+	</update>
+</mapper>

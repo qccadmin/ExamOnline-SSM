@@ -1,0 +1,61 @@
+body,div,span,h1,h2,h3,h4,h5,h6,p,pre,a,del,em,img,strong,tt,b,u,i,dl,dt,dd,ol,ul,li,fieldset,form,input:not([type="checkbox"]),select,label,legend,section,table,caption,tbody,tfoot,thead,tr,th,td,textarea,canvas,embed,mark,audio,video,menu{
+	margin:0;
+	padding:0;
+	border:none;
+	vertical-align:baseline;
+	background-color:transparent;
+	box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
+	display:block;
+}
+input,button,select,textarea{
+	outline: none;
+}
+body{
+	line-height:1;overflow-x: hidden;
+}
+ol,ul{
+	list-style:none;
+}
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+textarea{
+	resize:none;
+}
+h1{
+	-webkit-margin-before:0;
+	-webkit-margin-after:0;
+	-webkit-margin-start:0;
+	-webkit-margin-end:0;
+}
+a{
+	color:inherit;
+	text-decoration:none;
+	cursor:pointer;
+}
+i{
+	display:block;
+}
+*{
+	font-family: '微软雅黑',Arial;
+     font-weight:normal;
+     font-style:normal;
+     font-size: 16px;
+ }
+*:before, *:after{
+	box-sizing:border-box;
+}
+::-webkit-file-upload-button{
+	cursor:pointer;
+}
+button{
+	border: none;
+	background: transparent;
+	cursor: pointer;
+}
+
+p{line-height: 24px}

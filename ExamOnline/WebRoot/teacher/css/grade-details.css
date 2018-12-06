@@ -1,0 +1,160 @@
+/*----------grade-manage-------------*/
+main{
+	min-height: 600px;
+}
+.pagination>li {
+    width:34px;
+    height:34px;
+    display:block;
+    float:left;
+}
+/*----------Top:the box of the search-infor and operations------------------*/
+.opr{
+	height: 50px;
+	line-height: 50px;
+	padding-top: 5px;
+}
+.top-display-b {
+    display: block;
+}
+.opr div{
+	padding: 0;
+}
+.opr .btn-grade{
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	background: #FFFFFF;
+	border: 1px solid #CCCCCC;
+	border-radius: 5px;
+	margin-left: 20px;
+	font-size: 16px;/*awosome*/
+}
+.opr .search-box{
+	height: 40px;
+}
+.opr .search-box input[type=text]{
+	width: 80%;
+	height: 40px;
+	margin: 0px;
+	border: 1px solid #CCCCCC;
+	border-radius: 5px;
+	border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+.opr .search-box button{
+	width: 15%;
+	line-height: 40px;
+	margin: 0px;
+	border-radius: 5px;
+	border-bottom-left-radius: 0px;
+	border-top-left-radius: 0px;
+}
+
+/*--------fliter----------*/
+.row{
+	margin: 0px;
+}
+#btn1{
+	width: 230px;
+	display: inline-block;
+	position: relative;
+}
+#pagination{
+	width: 250px;
+	margin: 0px 40%;
+}
+.fliter-box{
+	width: 59%;
+	position: absolute;
+	top: 43px;
+	left: 74px;
+	display: none;
+}
+#fliterBox li{
+	cursor:pointer;
+}
+.year{
+	height: 100%;
+	padding: 0px;
+}
+.list-item{
+	list-style: none;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border-bottom: 1px solid rgba(91,192,222,0.7);
+}
+.nav-actived{
+	background-color: rgba(91,192,222,0.5);
+}
+.subject{
+	padding: 0px;
+	border-left: 2px solid rgba(91,192,222,0.5);
+	height: 100%;
+}
+.subject ul li:hover,.year ul li:hover{
+	font-size:16px;
+	background-color: rgba(91,192,222,0.2);
+}
+
+/*-------grade table------------*/
+.grade-table{
+}
+.grade-table th,td{
+	text-align: center;
+}
+
+/*-------modifybox---------*/
+#page{
+	width: 250px;
+	margin: 0px 40%;
+}
+#box{
+	width:300px;
+	height:300px;
+	border:2px solid lightblue;
+	background: #fff;
+	border-radius: 5px;
+	position:fixed;
+	z-index: 4;
+	top:150px;
+	left:600px;
+	opacity: 1;
+	padding:20px;
+	display: none;
+}
+#box span{
+	display: inline-block;
+	line-height: 40px;
+}
+#box strong{
+	width: 80px;
+	display: inline-block;
+}
+#box input{
+	height:40px;
+	line-height: 40px;
+	max-width:60%;
+	border:1px solid #CCCCCC;
+	border-radius: 5px;
+}
+#box .btnBox{
+	width: 80%;
+	position: absolute;
+	bottom: 30px;
+}
+
+/*閬僵灞�/
+#mask{
+	width: 100%;
+	height: 100%;
+	background:#000;
+	opacity: 0.4;
+	position: fixed;
+	z-index: 3;
+	top:0;
+	left: 0;
+	display: none;
+}
+

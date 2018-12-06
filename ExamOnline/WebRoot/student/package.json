@@ -1,0 +1,26 @@
+{
+  "name": "mobile",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^6.5.3",
+    "browser-sync": "^2.17.6",
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.2.0",
+    "gulp-rename": "^1.2.2",
+    "postcss-inline-comment": "^3.0.0",
+    "postcss-sassy-mixins": "^2.0.0",
+    "postcss-scss": "^0.4.0",
+    "postcss-simple-extend": "^1.0.0",
+    "postcss-strip-inline-comments": "^0.1.5",
+    "precss": "^1.4.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}

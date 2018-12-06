@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.Lesson_infoDao">
+	<select id="queryAll" resultMap="searchExamPlan">
+		SELECT t1.examplanId,t4.courseId
+		,t4.courseName ,t3.paperId ,t2.className ,t5.teacherName FROM
+		examplaninfo t1,classinfo t2,paperinfo t3,courseinfo t4,teacherinfo t5
+		WHERE t1.paperId=t3.paperId AND t1.classId=t2.classId AND
+		t3.courseId=t4.courseId AND t4.teacherId=t5.teacherId
+	</select>
+	<resultMap type="ExamPlanInfo" id="searchExamPlan">
+		<id property="examplanId" column="examplanId" />
+		<association property="paperInfo" javaType="PaperInfo">
+			<id property="paperId" column="paperId" />
+			<association property="courseInfo" javaType="CourseInfo">
+				<id property="courseId" column="courseId" />
+				<result property="courseName" column="courseName" />
+				<association property="teacherInfo" javaType="TeacherInfo">
+					<result property="teacherName" column="teacherName" />
+				</association>
+			</association>
+		</association>
+		<association property="classInfo" javaType="ClassInfo">
+			<result property="className" column="className" />
+		</association>
+	</resultMap>
+	<select id="queryCourse" parameterType="int" resultType="CourseInfo">
+		SELECT *
+		FROM courseinfo where teacherId=#{teacherId}
+	</select>
+	<insert id="addExamPaper" parameterType="PaperInfo">
+		INSERT INTO
+		paperinfo(paperName,courseId) VALUES
+		(#{paperName},#{courseInfo.courseId});
+	</insert>
+	<select id="queryPaper" parameterType="int" resultType="PaperInfo">
+		SELECT
+		t1.* FROM paperinfo t1,courseinfo t2,teacherinfo t3 WHERE
+		t1.courseId=t2.courseId AND t2.teacherId=t3.teacherId AND
+		t3.teacherId=#{teacherId}
+	</select>
+	<select id="queryClass" resultType="ClassInfo">
+		SELECT * FROM
+		classinfo,classandteacher WHERE
+		classandteacher.classId=classinfo.classId AND
+		classandteacher.teacherId=#{teacherId}
+	</select>
+	<insert id="addExamPlan">
+		INSERT INTO examplaninfo(classId,paperId) VALUES
+		(#{classId},#{paperId});
+	</insert>
+	<select id="count" resultType="int">
+		SELECT COUNT(*) FROM
+		examplaninfo
+		t1,classinfo t2,paperinfo t3,courseinfo t4,teacherinfo t5 WHERE
+		t1.paperId=t3.paperId AND t1.classId=t2.classId AND
+		t3.courseId=t4.courseId AND t4.teacherId=t5.teacherId
+	</select>
+
+	<select id="queryAllByPage" parameterType="Page" resultMap="searchExamPlan">
+		SELECT
+		t1.examplanId,t4.courseId ,t4.courseName ,t3.paperId
+		,t2.className
+		,t5.teacherName FROM
+		examplaninfo t1,classinfo
+		t2,paperinfo
+		t3,courseinfo t4,teacherinfo t5
+		WHERE t1.paperId=t3.paperId
+		AND
+		t1.classId=t2.classId AND
+		t3.courseId=t4.courseId AND
+		<if test="pianyi!=-1">
+			t4.teacherId=t5.teacherId LIMIT #{pianyi},#{rows}
+		</if>
+	</select>
+	<delete id="deletePlan" parameterType="int">
+		DELETE FROM examplaninfo
+		WHERE examplanId = #{examplanId}
+	</delete>
+</mapper>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.ClassInfoDao"><!-- 写对应类名全路径 -->
+	<insert id="insert"  parameterType="ClassInfo"  useGeneratedKeys="true" keyProperty="classId">
+		INSERT INTO
+		classinfo(classname)
+		VALUES(#{className})
+	</insert>
+	<select id="queryAllClass" resultMap="ClassInfoMap">
+	select * from classinfo
+	</select>
+	<select id="queryAll" parameterType="Page" resultMap="ClassInfoMap">
+		select * from classinfo limit #{pianyi},#{rows}
+	</select>
+	<select id="queryByName" resultMap="ClassInfoMap">
+		select * from classinfo
+		<if test="classname!=null and classname!=''">
+			 where className like '%${classname}%'
+		</if>
+		limit #{page.pianyi},#{page.rows}
+	</select>
+	
+	<update id="update" parameterType="ClassInfo">
+		update classinfo set className = #{className} where classId = #{classId}
+	</update>
+	<delete id="delete" parameterType="int">
+		delete from classinfo where
+		classId = #{classId}
+	</delete>
+	<select id="queryStudentCountsByClassId" parameterType="int" resultType="int">	
+		SELECT COUNT(*) FROM studentinfo a,classinfo b WHERE a.classId=b.classId AND a.classId=#{classId}
+	</select>
+	<select id="queryById" parameterType="int" resultMap="ClassInfoMap">
+		select * from classinfo where classId = #{classId}
+	</select>
+	
+	<select id="queryAllCount" resultType="int">
+		select count(*) from classinfo
+	</select>
+	<select id="queryByNameCount" resultType="int">
+	select count(*) from classinfo
+		<if test="classname!=null and classname!=''">
+			 where className like '%${classname}%'
+		</if>
+	</select>
+	<insert id="insertTC">
+		INSERT INTO
+		classandteacher(classId,teacherId)
+		VALUES(#{classId},#{teacherId})
+	</insert>
+	<delete id="deleteTC">
+		delete from classandteacher where classId = #{classId} and teacherId = #{teacherId}
+	</delete>
+	
+	<resultMap type="ClassInfo" id="ClassInfoMap">
+		<id property="classId" column="classId"/>
+		<result property="className" column="className"/>		
+	</resultMap>
+</mapper>

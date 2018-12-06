@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.ExamGradeDao"><!-- 写对应类名全路径 -->
+	<select id="seacherPaperState" resultType="PaperInfo">
+		SELECT DISTINCT
+		examplaninfo.paperId,paperinfo.paperName FROM examplaninfo,paperinfo
+		WHERE examplaninfo.examState=2 AND
+		paperinfo.paperId=examplaninfo.paperId
+	</select>
+	<select id="seacherScore" resultType="ScoreInfo" parameterType="int">
+		SELECT * FROM scoreinfo WHERE paperId=#{id}
+	</select>
+	<select id="seacherScoreClass" resultType="ClassInfo"
+		parameterType="int">
+		SELECT DISTINCT classinfo.classId FROM
+		scoreinfo,studentinfo,classinfo WHERE scoreinfo.paperId=#{id} AND
+		scoreinfo.studentId=studentinfo.studentId AND
+		classinfo.classId=studentinfo.classId
+	</select>
+	<select id="seacherScoreClassScore" resultMap="ScoreInfoMap"
+		parameterType="int">
+		SELECT
+		scoreinfo.scoreId,scoreinfo.paperId,scoreinfo.sumSco,classinfo.className
+		FROM scoreinfo,studentinfo,classinfo WHERE
+		studentinfo.studentId=scoreinfo.studentId AND
+		scoreinfo.studentId=studentinfo.studentId AND
+		classinfo.classId=studentinfo.classId AND scoreinfo.paperId=#{id} AND
+		studentinfo.classId=#{classId}
+	</select>
+	<resultMap type="ScoreInfo" id="ScoreInfoMap">
+		<id column="scoreId" property="scoreId" />
+		<result column="sumSco" property="sumSco"/>
+		<association property="studentInfo" javaType="StudentInfo">
+			<association property="classInfo" javaType="ClassInfo">
+				<result column="className" property="className"/>
+			</association>
+		</association>
+	</resultMap>
+</mapper>

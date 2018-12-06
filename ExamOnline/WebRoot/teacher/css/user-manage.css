@@ -1,0 +1,46 @@
+/*main********************************/
+.row{
+	margin: 0px;
+}
+.filter #btn1{
+	width: 200px;
+	position: relative;
+}
+#pagination{
+	width: 250px;
+	margin: 0px 40%;
+}
+.fliter-box{
+	width: 50%;
+	height: 250px;
+	position: absolute;
+	top: 35px;
+	left: 90px;
+	display: none;
+}
+#fliterBox li{
+	cursor:pointer;
+}
+.year{
+	height: 100%;
+	padding: 0px;
+}
+.list-item{
+	list-style: none;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border-bottom: 1px solid rgba(91,192,222,0.7);
+}
+.nav-actived{
+	background-color: rgba(91,192,222,0.5);
+}
+.subject{
+	padding: 0px;
+	border-left: 2px solid rgba(91,192,222,0.5);
+	height: 100%;
+}
+.subject ul li:hover,.year ul li:hover{
+	font-size:16px;
+	background-color: rgba(91,192,222,0.2);
+}

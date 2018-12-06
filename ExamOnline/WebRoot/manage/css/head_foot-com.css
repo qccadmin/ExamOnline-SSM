@@ -1,0 +1,135 @@
+header{
+    width: 100%;height: 140px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.30);
+    z-index: 1;
+}
+header>.header{
+    width: 1200px;height: 140px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+/*logo*/
+header>.header>.logo{
+    width: 533px;height: 79px;
+    background-image: url("../res/img/LOGO.png");
+    background-size: 100%;
+    margin-top: 35px;
+    float: left;
+}
+
+/*右侧导航栏*/
+header>.header>.hd-link{
+    float: right;
+    margin-top: 45px;
+}
+header>.header>.hd-link>.hd-link1{
+    color: #5D7C97;
+    line-height: 16px;
+    float: right;
+    position: relative;top: -35px;
+    cursor: pointer;
+}
+header>.header>.hd-link>.hd-link1>.hd-link1-a{
+    float: left;
+    margin-left: 20px;
+}
+header>.header>.hd-link>.hd-link1>.hd-link1-a>a{
+    font-size: 14px;
+}
+header>.header>.hd-link>.hd-link2{
+    font-size: 22px;
+    color: #646464;
+    line-height: 18px;
+    float: left;
+    margin-top: 23px;
+}
+header>.header>.hd-link>.hd-link2>.hd-link1-b{
+    height: 43px;
+    float: left;
+    margin-left: 40px;
+}
+header>.header>.hd-link>.hd-link2>.hd-link1-b>a{width: 100%;height: 100%;font-size: 18px;font-weight: 200 }
+.sel{ border-bottom: 4px solid #5481E6;}
+/*header>.header>.hd-link>.hd-link2>.hd-link1-b[class~='sel']{ border-bottom: 4px solid #5481E6;}*/
+header>.header>.hd-link>.hd-link2>.hd-link1-b:hover{
+    color: #5481E6;
+    border-bottom: 4px solid #5481E6;
+}
+
+/*右侧悬浮栏设置*/
+.fixed{
+    width: 110px;height: 150px;
+    position: fixed;
+    top: 400px;
+}
+.fixed>ul>li{
+    width: 60px;
+    height: 30px;
+    margin-top: 10px;
+}
+.fixed>ul>li:first-child{
+    background-image: url("../res/img/skill-test/orange-lb.png");
+    background-position: right;
+    color: #FFBC49;
+}
+.fixed>ul>li:nth-child(2){
+    background-image: url("../res/img/skill-test/blue-lb.png");
+    background-position: right;
+    color: #5E80FA;
+}
+.fixed>ul>li:nth-child(3){
+    background-image: url("../res/img/skill-test/green-lb.png");
+    background-position: right;
+    color: #0CAD10;
+}
+.fixed>ul>li:nth-child(4){
+    background-image: url("../res/img/skill-test/red-lb.png");
+    background-position: right;
+    color: #D74425  ;
+}
+.fixed>ul>li div{
+    width: 50px;
+    display: none;
+}
+.fixed>ul>li label{
+    float: left;
+    position: relative;
+    top: 6px;left: 10px;
+}
+.fixed>ul>li img{
+    display: inline-block;
+    float: right;
+    position: relative;
+    top:6px;right: 27px;
+}
+
+/*底部*/
+footer{
+    width: 100%;height: 140px;
+    background: #5EB0FA;
+    color: #FFFFFF;
+}
+footer>.footer{
+    width: 750px;height: 140px;
+    margin: 0 auto ;
+}
+footer>.footer>ul{
+    width: 390px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 35px 1px;
+}
+footer>.footer>ul>li{
+    width: auto;line-height: 18px;
+    float: left;
+    margin-left: 20px;
+}
+footer>.footer>ul>.ft-f{
+    width: 2px;height: 16px;
+}
+footer>.footer>.ft-l{
+    width: 429px;
+    margin-left: 155px;
+    margin-bottom: 30px;
+}

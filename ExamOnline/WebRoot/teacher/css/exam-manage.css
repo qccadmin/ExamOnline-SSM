@@ -1,0 +1,73 @@
+body{
+	font-size:14px;
+	font-family:Arial,Verdana,Tahoma,"微软雅黑","黑体";
+	line-height:120%;
+	background:#fff;
+	margin:0;
+	overflow-x:hidden;
+	position: relative;
+	}
+main{
+	min-height: 600px;
+}
+
+#ulClass li a input{
+	border: none;
+	background-color: transparent;
+	font-size: 16px;
+	color: #0088CC;
+	}
+
+#shadow{
+	width: 100%;
+	height: 100%;
+	background-color: gray;
+	opacity: 0.5;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 3;
+	}
+.change-exam{
+	width: 30rem;
+	height: 17rem;
+	background-color: white;
+	border: 0.2rem lightblue solid;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	display: none;
+	z-index: 4;
+	}
+.exam-header{
+	height: 12%;
+	background-color: lightblue;
+	position: relative;
+	padding: 4px;
+}
+.exam-header span{
+	font-size: 16px;
+	}
+.exam-header i{
+	font-size: 26px;
+}
+.change-exam-condition{
+	padding: 20px 5px 15px 5px;
+}
+#exam-btn1,#exam-btn2{
+	margin: 0;
+	line-height: 220%;
+}
+.change-btn{
+	padding-left: 43px;
+}
+.dis-inline{
+	display: inline;
+}
+#addClose{
+	cursor: pointer;
+}

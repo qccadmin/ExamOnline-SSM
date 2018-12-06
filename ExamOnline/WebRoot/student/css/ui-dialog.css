@@ -1,0 +1,127 @@
+﻿body { font-family : "Microsoft YaHei"; }
+/*beijingcailiao*/
+.ui-cailiao-content{line-height:30px; font-size:16px; display:inline-block;}
+.ui-cailiao-content p{ margin-bottom:10px;}
+.ui-dialog-body .ui-dialog-tikucliao {min-width: 500px; line-height: 26px; padding:20px;}
+.ui-cailiao-content { max-height: 385px;  height: auto!important;height: 370px; overflow: auto; text-align: left;}
+/*laoshikecheng*/
+#bmbox{width:680px;height:auto;margin:auto;display:none; font-size:12px;line-height:30px; color:#666; padding:0 20px}
+#bmbox table th,#bmbox table td{text-align:center;}
+#bmbox table th{height:42px; line-height:42px;font-weight:normal;color:#333;background:#f6f6f6; color:#444; font-size:14px}
+#bmbox table td{ line-height:30px; padding:8px 5px;border-bottom:#f8f8f8 solid 1px}
+#bmbox table td a{color:#069}
+#bmbox table td .check{background:#FFFFee;}
+#bmbox .bm_ke{height:auto;max-height:275px;_height:expression(this.scrollHeight > 420 ? "420px" : "auto");overflow-y:auto;overflow-x:hidden;}
+#bmbox .bm_btn{height:47px;padding-top:10px;}
+#bmbox .bm_btn span{float:right;text-align:center;}
+.bdmbox-info{ font-size:18px; padding:20px 0; color:#666; text-align:center}
+.bdmbox-info span{ color:#ee4500;}
+.bdmbox-info .ico{ width:30px; height:30px; background:url(images/ts.png) 0 0; display:inline-block; vertical-align:-7px}
+.bdmbox-info .txt{text-align:left; text-indent:10px;display:inline-block}
+
+/*shangchu*/
+.ui-del-con{ padding:40px 20px; line-height:40px;}
+.ui-dialog-tiku .ui-dialog-icon {width: 36px;height: 36px; background-image: url(../images/know.png); float:left; margin: 0 20px 0 30px;}
+.ui-dialog-jiao .ui-dialog-content{ float:left; padding:0 25px 0 0;}
+.orgTxt{ color:#f28d32; font-size:18px;}
+/*jiucuo*/
+.pop-error{ width:520px; line-height:23px; margin-left:5px; color:#333;  font-size:12px; padding:0 15px; padding:25px;}
+.pop-error p{ margin:0; padding:5px 0; text-align:left; font-size:14px; margin-top:5px;}
+.pop-error .txt{color:#666; font-size:14px; text-align:left; line-height:26px; border-bottom:1px dotted #ddd; padding-bottom:15px;}
+.pop-error label{ vertical-align: middle; margin:0 25px 10px 0; font-size:14px; color:#666; text-align:left;}
+.option{ text-align:left; margin-top:10px;}
+.pop-error input{vertical-align:middle}
+.pop-error span{vertical-align: middle}
+.pop-error textarea{width:495px;height:90px; line-height:24px; border-radius:6px;box-shadow: 0 2px 2px #dedede inset; overflow:auto; padding:4px 10px; background:#fff; font-size:14px; margin-top:20px; border:#d3d3d3 solid 1px;outline: none; resize: none}
+.warn{ font-family:"\u5b8b\u4f53"; color:#cc3333; font-size:12px; padding-top:10px;padding-left:25px; background:url(//img.233.com/wx/uc/mk/v1/skin/a/tk_gd.png) -182px -155px no-repeat}
+/*jubao*/
+.pop-jubao{ width:345px;}
+.pop-error textarea{width:320px;}
+/*zanting*/
+.pop-have {width:320px; height: 190px; cursor: pointer; background: url(../images/pause.gif) center center no-repeat}
+/*tingliti*/
+.ui-dialog-tikucliao .listen-cl{ width:310px;}
+.ui-dialog-tikucliao .listen-cont{ width:100%; margin:0;}
+.listen-czt span{ float:right; padding:0 10px 0 0; margin-top:10px;}
+.ui-dialog-body .ui-dialog-tikucliao .lis-left{padding:15px 10px; }
+.ui-dialog-tikucliao .listen-cl{ margin-right:0;}
+.ui-dialog-tikucliao .listen-cont .listen-czt span{padding-top:10px; margin-right:20px;}
+/*jikao*/
+.ui-dialog-jikao{ padding:30px 30px 0 30px; text-align:center; font-size:16px;}
+.ui-dialog-jikao .ui-dialog-icon{ width:36px; height:36px; background-image: url(knowledge.png); background-position:0 -205px; float: left; margin:0 20px 0 30px;}
+/*jikaomoshi*/
+.exam-info-txt{ width:465px; height:auto; font-size:14px; padding:20px 30px; text-align:center; display:inline-block; }
+.exam-info-txt h3{ line-height:26px; font-size:16px; border-bottom:1px dotted #e7e7e7; color:#e45433; padding:15px 0;}
+.exam-info-txt .info{padding-left:70px; padding-top:10px; margin:0 auto; width:90%; text-align:left;}
+.exam-info-txt .info li{ width:200px;line-height:30px; float:left;zoom:1; }
+.exam-info-txt .info .special{ z-index:80;position:relative;}
+.exam-info-txt .info li span{ float:left; color:#999;}
+.exam-info-txt .other{ position:relative; text-indent:2.5em; padding-top:10px; padding-bottom:5px}
+.exam-info-txt .info .other span{ color:#333;}
+.exam-info-txt .other i{ display:block; position:absolute; width:27px; height:26px; background-image:url(../images/ex_icon.png); background-repeat:no-repeat}
+.exam-info-txt .other .reply{ left:0; background-position: 0  0;}
+.exam-info-txt .other .review{left:0; background-position: -35px  0;}
+.exam-info-txt .bd{ width:100%; padding-top:30px;padding-bottom:20px; float:left; text-align:center}
+.exam-info-txt .jikao,.exam-info-txt .mokao,.exam-info-txt .grayOn{display:inline-block; font-size:16px;line-height:40px; border-width:1px; border-style:solid; width:160px; white-space:nowrap; color:#FFF; -moz-border-radius: 2px;  -webkit-border-radius: 2px;  border-radius:2px; -webkit-box-shadow:3px 3px 0px #f2f2f2; -moz-box-shadow:3px 3px 0px #f2f2f2; box-shadow:3px 3px 0px #f2f2f2; margin-left:25px; margin-right:25px; }
+.exam-info-txt .mokao{background-color:#f06000; border-color:#df5900;}.exam-info-txt .mokao:hover{ background-color:#df5900}
+.exam-info-txt .jikao{background-color:#5db552; border-color:#4da841;}.exam-info-txt .jikao:hover{ background-color:#4da841}
+.exam-info-txt .grayOn{background-color: #d3d3d3; border-color:#c3c3c3; color:#fff; cursor:default}
+.exam-info-txt .bdsharebuttonbox{ width:200px; position:relative; top:-40px; float:right; }
+.ui-dialog-zui{ padding:30px;}
+.ui-dialog-zui .ui-dialog-icon{ margin:-5px 20px 0 50px;}
+/*kaoshikemu*/
+h2.h2-title { font-size:20px;text-align: left;margin:10px 0 20px 0; line-height:20px; color:#333; border-left:3px solid #ea4f29; padding-left:15px;}
+.ui-kemu-body{ width:630px; padding:20px;}
+.ui-kemu-body .subject{ border-bottom:1px solid #f0f0f0; margin:0 0 30px 0; padding-bottom:20px;}
+ul.change li a{padding:8px 10px; margin-right:15px;display:inline-block;box-shadow: 1px 2px 1px #f5f5f5; margin-bottom:10px; border:1px solid #ebebeb; background:#fafafa; border-radius:3px; font-size:14px; position:relative; color:#666;}
+ul.change li a.hover,ul.change li a:hover,ul.change li a.this{ border-color:#ea4f29; background:#fff; color:#ea4f29;}
+ul.change li a.this{background: url(../images/set_ico.png) no-repeat right -44px;}
+ul.change li a i{ display:inline; width:13px; height:13px; position:absolute; bottom:0px; right:0; background:url(vindex_icon.png) -106px -89px;}
+
+.ui-kemu-body .pracl-nav .tagnav dd a{ border:1px solid #e7e7e7; padding:5px 10px; margin-right:8px; border-radius:2px;}
+.ui-kemu-body .pracl-nav .tagnav dd.na-more a{ padding-right:25px;}
+.ui-kemu-body .pracl-nav .tagnav dd.this a, .ui-kemu-body .pracl-nav .tagnav dd a:hover{ border:1px solid #e45c40;}
+.ui-kemu-body .pracl-nav .tagnav dl{ padding-left:0;}
+.ui-kemu-body .pracl-nav .tagnav .nav-show{ width:98%; padding:5px 1%; margin-left:0;}
+.ui-kemu-body .pracl-nav .tagnav .nav-show a{padding:0 10px; margin-right:10px;}
+.ui-kemu-body .pracl-nav .tagnav .nav-show a:hover{ border:0;}
+.ui-kemu-body .pracl-nav{ margin:0 0 15px 0;}
+.ui-kemu-body .pracl-nav .tagnav .nav-show a{ border:0;}
+.ui-kemu-body .pracl-nav .tagnav dd a i{ top:15px; right:12px;}
+.ui-kemu-body .ui-dialog-button{ margin-bottom:15px;}
+
+
+/*kaoshiriqi*/
+.examInfo_arter{ padding:20px 50px;}
+.examInfo_arter div{ margin-bottom:10px;}
+.examInfo_arter .opration{ width:210px; margin:0 auto;}
+.examInfo_arter .opration a{ padding:8px 30px; display:block; float:left; border-radius:3px; margin-right:15px; margin-top:20px;}
+
+.examInfo_arter .choice .examDate{ float:left; background:#fff;padding:0px; padding-right:0px; border:1px solid #ddd; border-top:none; position:absolute; margin-top:-1px; display:inline; overflow-y:auto;overflow-x:hidden; z-index:2; left:0; top:38px;}
+.examInfo_arter .choice .examDate h4{ padding: 10px 0;background: #F0F0F0; font-size:12px; }
+.examInfo_arter .choice .examDate .select-year{ width:240px; border:none; position:static}
+.examInfo_arter .choice .examDate ul.select-year li{ width:240px; padding:0; font-size:12px;}
+.examInfo_arter .choice .examDate ul.select-year li a{ margin-left:10px;}
+.examInfo_arter .adr-time{ float: left; padding:10px 0; margin-right:45px; text-align:left;}
+ul.select-year li,ul.select-mouth li{float:left;cursor:pointer;line-height:24px;background:none;width:60px;padding-left:25px; text-align:left;color:#999;}
+ul.select-year li:hover,ul.select-mouth li:hover{ background:#f5f5f5; color:#fb642c;}
+ul.select-year li a,ul.select-mouth li a{color:#3190dc}
+ul.select-mouth li{ width:30px;}
+
+.my-exam .exam-list .editor{ background:#f8f8f8;}
+.examInfo_arter p{ float:left; line-height:35px; font-size:12px; color:#666; display:block; font-size:16px;}
+.examInfo_arter .choice{ height:auto; background:url(../images/personal_set.png) 228px -353px no-repeat #fff; text-indent:10px; float:left; _margin-left:5px; display:inline; position:relative}
+.examInfo_arter .choice_set{ float:left; width:240px;_width:239px; padding-right:17px; font:normal 14px/35px "Microsoft YaHei";  height:35px;border:1px solid #ddd;box-shadow:2px 2px 2px 0px #f3f3f3 inset;overflow:hidden;}
+.year,.mouth,.day{ float:left; width:98px;height:auto; background:url(../images/personal_set.png) 70px -353px no-repeat #fff; text-indent:10px} 
+.mouth,.day{ width:75px;background:url(../images/personal_set.png) 44px -353px no-repeat #fff;}
+.year-btn,a.year-btn,.mouth-btn,a.mouth-btn{ float:left; width:80px; padding-right:17px; font:normal 14px/35px "Microsoft YaHei";  height:35px;border:1px solid #ddd;box-shadow:2px 2px 2px 0px #f3f3f3 inset;overflow:hidden;  }
+ul.select-year,ul.select-mouth{ float:left; background:#fff;width:80px;padding:0px; padding-right:17px; border:1px solid #ddd; border-top:none; position:relative; margin-top:-1px; display:inline; max-height:100px;overflow-y:auto;overflow-x:hidden; }
+ul.select-mouth{ width:55px;}
+.mouth-btn,a.mouth-btn{ width:55px;}
+
+.zhunqu-con .zh-text{ line-height:26px; font-size:16px; margin:20px 0;}
+
+/*ie6-ie8*/
+@media \0screen\,screen\9{
+	.ui-kemu-body{ width:670px; }
+}

@@ -1,0 +1,59 @@
+@charset "utf-8";
+/*chongzhiyangshi*/
+body{margin:0;padding:0px;font-size:12px;color:#333;text-align:left;font-family: "Microsoft Yahei", "microsoft Yahei";font-size:14px;background:#f0f0f0;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,pre,form,fieldset,input,textarea,blockquote,th,td{ margin:0px; padding:0px;}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details { display:block; } 
+table{ border-collapse:collapse; border-spacing:0;}
+fieldset,img{ border:0px;}
+address,caption,em,code,i,b{ font-style:normal; font-weight:normal;}
+pre, code, kbd, samp { font-family:inherit; } 
+ol,ul{ list-style:none;}
+h1,h2,h3,h4,h5,h6{ font-size:100%; font-weight:normal;}
+a{text-decoration:none; color:#333;}
+a:hover{ color:#e45c40;}
+/*qingchufudong*/
+.clearfix:after {display:block;visibility:hidden;clear:both;height:0;content:'.';}
+.clearfix {zoom:1;}
+a:link,a:visited,a:hover,a:focus,input:link,input:visited,input:hover,input:focus,button:link,button:visited,button:hover,button:focus{ border:none;text-decoration:none;outline:none;}
+.clear{ clear:both;}
+/*wenziyangshi*/
+.f-fb{ font-weight:bold;}
+.f-unline{ text-decoration:none;}
+.f-ffyh { font-family:"\5FAE\8F6F\96C5\9ED1"; }
+.f-ffar { font-family:Arial; }
+.f-ffst { font-family:"\5b8b\4f53"; }
+.f-lh23{ line-height:23px;}
+.f-lh26{ line-height:26px;}
+.f-lh180{ line-height:180%;}
+.f-lh200{ line-height:200%;}
+.f-f12{ font-size:12px;}
+.f-f14{ font-size:14px;}
+.f-f18{ font-size:18px;}
+/*bujugongneng*/
+.f-fl{ float:left; _display:inline;}
+.f-fr{ float:right; _display:inline;}
+.f-cb{ clear:both;}
+.f-pr{ position:relative;}
+.f-dn{ display:none;}
+.f-db{ display:block;}
+.f-tal{ text-align:left;}
+.f-tac{ text-align:center;}
+.f-tar{ text-align:right;}
+/*neiwaibianju*/
+.f-mt10{ margin-top:10px;}
+.f-mt15{ margin-top:15px;}
+.f-mt20{ margin-top:0px;}
+.f-mt40{ margin-top:40px;}
+.f-mb20{ margin-bottom:20px;}
+.f-ml10{ margin-left:10px;}
+.f-ml20{ margin-left:20px;}
+.f-mr20{ margin-right:20px;}
+.f-mr40{ margin-right:40px;}
+.f-pt15{ padding-top:15px;}
+.f-pt45{ padding-top:45px;}
+.f-pb15{ padding-bottom:15px;}
+.f-pb30{ padding-bottom:30px;}
+/*guanbiao*/
+.f-csp { cursor:pointer; } 
+.f-csd { cursor:default; } 
+.f-bdr0{ border-right:0!important;}

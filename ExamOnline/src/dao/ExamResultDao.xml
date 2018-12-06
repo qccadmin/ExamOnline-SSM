@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.ExamResultDao"><!-- 写对应类名全路径 -->
+	<insert id="addExamResult" parameterType="ScoreInfo">
+		INSERT INTO scoreinfo(studentId,paperId,objectSco,sumSco) VALUES
+		(#{studentInfo.studentId},#{paperInfo.paperId},#{objectSco},#{sumSco})
+	</insert>
+	
+	<select id="getScoreInfoById" parameterType="int" resultMap="scoreInfoMap">
+	select a.scoreId,a.objectSco,a.subjectSco,a.sumSco,b.paperId,b.paperName,c.courseName 
+	from scoreinfo a,paperinfo b,courseinfo c
+	where b.courseId=c.courseId AND a.paperId=b.paperId AND studentId=#{studentId}
+	</select>
+	
+	<resultMap type="ScoreInfo" id="scoreInfoMap">
+		<id column="scoreId" property="scoreId"/>
+		<result column="objectSco" property="objectSco"/>
+		<result column="subjectSco" property="subjectSco"/>
+		<result column="sumSco" property="sumSco"/>
+		<association property="paperInfo" javaType="PaperInfo">
+		<id column="paperId" property="paperId"/>
+		<result column="paperName" property="paperName"/>
+			<association property="courseInfo" javaType="CourseInfo">
+				<result column="courseName" property="courseName"/>
+			</association>
+		</association>
+	</resultMap>
+</mapper>

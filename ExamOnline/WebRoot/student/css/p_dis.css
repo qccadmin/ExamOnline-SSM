@@ -1,0 +1,74 @@
+@charset "utf-8";
+/*wangyouhuifu*/
+.heel-stick-mid { padding: 0 0 15px 30px; border-bottom: 1px solid #f1f1f1; }
+.heel-stick-mid-content { margin: 0 auto; padding: 10px 0 0 50px; position: relative }
+.heel-stick-hui { margin-left: 50px; background: #efefef; padding: 10px; }
+.heel-stick-hui .heel-top { margin: 0 10px 0 0; padding: 3px 0; }
+.heel-stick-mid .left-img { position: absolute; left: 0%; top: 15px; }
+*html .heel-stick-mid .left-img { position: absolute; left: -50px; top: 8px; }
+.heel-stick-mid .left-img img { width: 40px; height: 40px; border-radius: 30px; }
+.heel-stick-mid .heel-top { position: relative; }
+.heel-stick-mid .heel-top span { margin-left: 10px; color: #acb4ba; font-size: 12px; }
+.heel-stick-mid .heel-top span em { color: #f96d15; }
+.heel-stick-mid .heel-top .report-icon { position: absolute; top: 10px; right: 35px; font-size: 12px; color: #92999f; padding-left: 22px; cursor: pointer; line-height: 16px; }
+.heel-stick-mid .heel-top .report-icon i { width: 17px; height: 17px; display: block; float: left; background-position: 0 -221px; margin-right: 3px; }
+.heel-stick-mid .heel-top .report-icon:hover i { background-position: -47px -221px; }
+.heel-stick-mid .heel-top .report-icon:hover { color: #f96d15; }
+.heel-stick-mid .heel-bot { font-size: 14px; }
+.heel-stick-mid .heel-top em { margin-right: 10px; }
+.heel-stick-mid .heel-top font.bule-color a { color: #005599; line-height: 32px; font-size: 14px; font-family: "Microsoft Yahei"; }
+.heel-stick-mid .heel-top font.bule-color i { font-family: "Microsoft Yahei"; color: #999; font-size: 12px; margin-right: 3px; }
+.heel-stick-mid .heel-bot { padding: 0 25px 5px 0; line-height: 24px; position: relative; margin-right: 10px; }
+.heel-stick-mid .ico-area { position: absolute; bottom: 0; right: 35px; z-index: 999; }
+.heel-stick-mid .ico-area span { float: left; color: #b8b8b8; line-height: 18px; }
+.heel-stick-mid .ico-area .agree-ico i { background-position: 0 -243px; }
+.heel-stick-mid .ico-area .disagree-ico i { background-position: 0 -269px; }
+.heel-stick-mid .ico-area .hf-ico i { background-position: 0 -295px; }
+.heel-stick-mid .ico-area .disagree-ico i, .heel-stick-mid .ico-area .hf-ico i { margin-top: 2px; }
+.heel-stick-mid .ico-area .agree-ico:hover i, .heel-stick-mid .ico-area .agree-ico .this { background-position: -45px -243px; }
+.heel-stick-mid .ico-area .disagree-ico:hover i, .heel-stick-mid .ico-area .disagree-ico .this { background-position: -46px -269px; }
+.heel-stick-mid .ico-area .hf-ico:hover i { background-position: -46px -295px; }
+.heel-stick-mid .ico-area em { display: inline; padding: 8px 0 8px 25px; margin-left: 10px; color: #92999f; position: relative; cursor: pointer; }
+.heel-stick-mid .ico-area em i { width: 17px; height: 17px; position: absolute; top: 5px; left: 0; display: block; }
+.heel-stick-mid .ico-area em:hover { color: #f96d15; }
+.heel-stick-mid .ico-area em .tips { width: 110px; position: absolute; top: 28px; left: -50%; padding: 5px 8px; text-align: center; font-family: "Microsoft Yahei"; font-size: 14px; background: #fbf6f1; border-radius: 30px; border: 1px solid #e8d4c0; color: #e45c40; }
+.heel-stick-mid .ico-area em .tips b { position: absolute; top: -5px; left: 50%; width: 14px; height: 9px; display: block; background-position: -48px -480px; }
+.heel-stick-mid .heel-info { color: #92999f; position: relative; margin-top: 3px; font-size: 12px; }
+.heel-stick-mid .heel-info a { color: #acb4ba; padding-left: 8px; }
+.heel-stick-mid .heel-info a:hover { color: #f96d15; }
+.heel-stick-mid .grey-color { margin-right: 8px; }
+*html .heel-stick-mid .heel-info { display: inline-block; }
+.huifu-textare { margin: 15px 0; *display:inline-block;
+}
+*html .huifu-textare { display: inline-block; }
+.huifu-textare textarea { width: 93%; height: 68px; border: 1px solid #ccd4d9; border-radius: 5px; padding: 15px; margin-bottom: 15px; }
+.huifu-textare button { background: #f96d15; color: #fff; border-radius: 3px; border: none; padding: 8px 25px; *padding:5px 20px;
+float: right; margin-right: 30px; cursor: pointer; font-family: "Microsoft Yahei"; }
+.huifu-textare button:hover { background: #fa6412; }
+.heel-stick-mid-huifu { margin-left: 45px; margin-top: 15px; border-top: 1px solid #f1f1f1; }
+.notes-difficu .huifu-textare { margin: 0; padding: 25px 0 25px 30px; background: #fbfbfb; border-top: 1px solid #f1f1f1; }
+.notes-none { text-align: center; padding: 75px 0; background: #fcfcfc; background: url(../images/pr_02ico.png) no-repeat center; }
+/*shijuanpinlun*/
+.notes-dif-bg .huifu-textare { background: #fff; border-bottom: 1px solid #f1f1f1; border-top: 0; margin: 0 30px; padding: 0 0 25px 0; }
+.notes-dif-bg .exam-t { margin-bottom: 20px; display: inline-block; }
+.notes-dif-bg .huifu-textare textarea { width: 96%; *margin-left:-30px;
+*margin-bottom:5px;
+}
+.notes-dif-bg .huifu-textare button { margin: 0; }
+.tk-notes-list-t .heel-stick-mid { margin: 0 30px; padding: 0 0 15px 0; border-bottom: 1px dashed #f0f1f2; }
+.tk-notes-list-t .heel-stick-mid .heel-bot { padding: 0 0 5px 0; margin-right: 0; }
+.tk-notes-list-t .heel-stick-mid .ico-area { right: 0; }
+.hf-limited { font-size: 12px; color: #999; }
+.heel-stick-mid .ico-area em.del-ico i { width: 15px; height: 15px; background: url(../images/pra_ico.png) no-repeat -29px -127px; top: 11px; left: 8px; }
+.heel-stick-mid .ico-area em.del-ico:hover i { background-position: -29px -143px; }
+
+/*ie6-ie8*/
+@media \0screen\,screen\9 {
+.huifu-textare textarea { width: 91%; }
+}
+ @media screen and (max-width:1200px) {
+.huifu-textare textarea { width: 91%; }
+}
+ @media screen and (max-width:1000px) {
+.tk-notes-list-t .heel-stick-mid .ico-area { width: 60px; right: 0; }
+}

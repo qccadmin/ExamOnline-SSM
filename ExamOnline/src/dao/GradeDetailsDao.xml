@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.GradeDetailsDao"><!-- 写对应类名全路径 -->
+	<select id="seacheList" resultMap="ScoreInfoMap" parameterType="int">
+		SELECT
+		scoreinfo.scoreId,scoreinfo.sumSco,studentinfo.studentId,studentinfo.studentName,classinfo.className
+		FROM scoreinfo,studentinfo,classinfo WHERE
+		studentinfo.studentId=scoreinfo.studentId AND
+		studentinfo.classId=classinfo.classId AND scoreinfo.paperId=#{id}
+		limit #{pianyi},#{row}
+	</select>
+	<resultMap type="ScoreInfo" id="ScoreInfoMap">
+		<id column="scoreId" property="scoreId" />
+		<result column="objectSco" property="objectSco" />
+		<result column="subjectSco" property="subjectSco" />
+		<result column="sumSco" property="sumSco" />
+		<association property="studentInfo" javaType="StudentInfo">
+			<id column="studentId" property="studentId" />
+			<result column="studentName" property="studentName" />
+			<association property="classInfo" javaType="ClassInfo">
+				<result column="className" property="className"/>
+			</association>
+		</association>
+	</resultMap>
+	<select id="SelectALLNum" parameterType="int" resultType="int">
+		SELECT
+		COUNT(*) FROM scoreinfo WHERE scoreinfo.paperId=#{id}
+	</select>
+	<delete id="deleteScore" parameterType="int">
+		DELETE FROM scoreinfo WHERE scoreId = #{id}
+	</delete>
+	<select id="downloadList" resultType="map" parameterType="int">
+		SELECT
+		scoreinfo.scoreId,scoreinfo.sumSco,studentinfo.studentId,studentinfo.studentName,classinfo.className
+		FROM scoreinfo,studentinfo,classinfo WHERE
+		studentinfo.studentId=scoreinfo.studentId AND
+		studentinfo.classId=classinfo.classId AND scoreinfo.paperId=#{id}
+	</select>
+<!-- 	<resultMap type="ScoreInfo" id="ScoreInfoMap2"> -->
+<!-- 		<id column="scoreId" property="scoreId" /> -->
+<!-- 		<result column="objectSco" property="objectSco" /> -->
+<!-- 		<result column="subjectSco" property="subjectSco" /> -->
+<!-- 		<result column="sumSco" property="sumSco" /> -->
+<!-- 		<association property="studentInfo" javaType="StudentInfo"> -->
+<!-- 			<id column="studentId" property="studentId" /> -->
+<!-- 			<result column="studentName" property="studentName" /> -->
+<!-- 			<association property="classInfo" javaType="ClassInfo"> -->
+<!-- 				<result column="className" property="className"/> -->
+<!-- 			</association> -->
+<!-- 		</association> -->
+<!-- 	</resultMap> -->
+</mapper>
